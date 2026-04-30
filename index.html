@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site Teste</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: white;
+      color: #333;
+    }
+
+    /* MENU */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      color: #2b7cff;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #2b7cff;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 50px;
+      gap: 30px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero span {
+      color: #27ae60;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .hero img {
+      width: 400px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-primary {
+      background-color: #2b7cff;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border: 2px solid #27ae60;
+      color: #27ae60;
+    }
+
+    /* CARDS */
+    .cards {
+      display: flex;
+      gap: 20px;
+      padding: 40px 50px;
+    }
+
+    .card {
+      flex: 1;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #2b7cff;
+    }
+
+    /* RODAPÉ */
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 30px;
+      background-color: #f5f5f5;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+
+      .cards {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <header>
+    <h1>MeuSite</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Serviços</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Conectando ideias, criando <span>soluções</span>.</h2>
+        <p>Esse é um site de teste criado para aprender desenvolvimento web.</p>
+        <button class="btn btn-primary" onclick="clicou()">Começar</button>
+        <button class="btn btn-secondary">Saiba mais</button>
+      </div>
+
+      <img src="https://via.placeholder.com/400" alt="Imagem ilustrativa">
+    </section>
+
+    <!-- CARDS -->
+    <section class="cards" id="servicos">
+      <div class="card">
+        <h3>Conexões</h3>
+        <p>Conecte pessoas com ideias parecidas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Aprendizado</h3>
+        <p>Aprenda coisas novas todos os dias.</p>
+      </div>
+
+      <div class="card">
+        <h3>Projetos</h3>
+        <p>Transforme ideias em projetos reais.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2026 - Meu Site Teste</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function clicou() {
+      alert("🚀 Bem-vindo! Vamos começar!");
+    }
+  </script>
+
+</body>
+</html>
