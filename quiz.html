@@ -1,69 +1,394 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <title>Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Cidadão do Futuro</title>
 
   <style>
-    body{
-      font-family: Arial;
+
+    body {
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
       text-align: center;
-      padding: 50px;
+      padding: 30px;
     }
 
-    .quiz-box{
+    .quiz-box {
       background: #1e293b;
       padding: 30px;
       border-radius: 12px;
-      width: 400px;
+      max-width: 600px;
       margin: auto;
     }
 
-    button{
-      padding: 10px 20px;
-      margin-top: 15px;
+    h1 {
+      color: #c084fc;
+    }
+
+    .pergunta {
+      text-align: left;
+      margin-top: 30px;
+      padding: 20px;
+      background: #334155;
+      border-radius: 10px;
+    }
+
+    .pergunta h3 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0;
+      padding: 10px;
+      background: #475569;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    label:hover {
+      background: #64748b;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin-top: 25px;
       border: none;
       border-radius: 8px;
       background: #a855f7;
       color: white;
       cursor: pointer;
+      font-size: 16px;
     }
+
+    button:hover {
+      background: #9333ea;
+    }
+
+    #resultado {
+      display: none;
+      margin-top: 25px;
+      padding: 20px;
+      background: #312e81;
+      border-radius: 10px;
+    }
+
+    .voltar {
+      display: inline-block;
+      margin-top: 20px;
+      color: #c084fc;
+      text-decoration: none;
+    }
+
   </style>
 </head>
 
 <body>
 
-<div class="quiz-box">
+  <div class="quiz-box">
 
-  <h1>🎯 Quiz de Tecnologia</h1>
+    <h1>🎯 Quiz de Tecnologia</h1>
 
-  <p>
-    A internet faz parte das TIC?
-  </p>
+    <p>
+      Descubra o quanto você já está preparado
+      para o mundo profissional e digital!
+    </p>
 
-  <button onclick="respostaCerta()">
-    Sim
-  </button>
 
-  <button onclick="respostaErrada()">
-    Não
-  </button>
+    <!-- PERGUNTA 1 -->
 
-</div>
+    <div class="pergunta">
 
-<script>
+      <h3>1. Você já fez um currículo?</h3>
 
-function respostaCerta(){
-  alert("✅ Resposta correta!");
-}
+      <label>
+        <input type="radio" name="q1" value="1">
+        Sim
+      </label>
 
-function respostaErrada(){
-  alert("❌ Resposta errada!");
-}
+      <label>
+        <input type="radio" name="q1" value="0">
+        Não
+      </label>
 
-</script>
+    </div>
+
+
+    <!-- PERGUNTA 2 -->
+
+    <div class="pergunta">
+
+      <h3>2. Você já fez algum curso profissionalizante?</h3>
+
+      <label>
+        <input type="radio" name="q2" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q2" value="0">
+        Ainda não
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 3 -->
+
+    <div class="pergunta">
+
+      <h3>3. Você sabe utilizar Word ou Google Docs?</h3>
+
+      <label>
+        <input type="radio" name="q3" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q3" value="0">
+        Tenho pouca experiência
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 4 -->
+
+    <div class="pergunta">
+
+      <h3>4. Você sabe criar um e-mail profissional?</h3>
+
+      <label>
+        <input type="radio" name="q4" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q4" value="0">
+        Não
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 5 -->
+
+    <div class="pergunta">
+
+      <h3>5. Você já pesquisou sobre uma profissão que gostaria de seguir?</h3>
+
+      <label>
+        <input type="radio" name="q5" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q5" value="0">
+        Não
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 6 -->
+
+    <div class="pergunta">
+
+      <h3>6. Você sabe procurar uma vaga de emprego pela internet?</h3>
+
+      <label>
+        <input type="radio" name="q6" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q6" value="0">
+        Não
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 7 -->
+
+    <div class="pergunta">
+
+      <h3>7. Você sabe por que deve proteger seus dados pessoais?</h3>
+
+      <label>
+        <input type="radio" name="q7" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q7" value="0">
+        Não
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 8 -->
+
+    <div class="pergunta">
+
+      <h3>8. Você verifica se uma informação é verdadeira antes de compartilhá-la?</h3>
+
+      <label>
+        <input type="radio" name="q8" value="1">
+        Sempre
+      </label>
+
+      <label>
+        <input type="radio" name="q8" value="0">
+        Nem sempre
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 9 -->
+
+    <div class="pergunta">
+
+      <h3>9. Você já participou de algum projeto usando tecnologia?</h3>
+
+      <label>
+        <input type="radio" name="q9" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q9" value="0">
+        Não
+      </label>
+
+    </div>
+
+
+    <!-- PERGUNTA 10 -->
+
+    <div class="pergunta">
+
+      <h3>10. Você gostaria de aprender mais sobre tecnologia?</h3>
+
+      <label>
+        <input type="radio" name="q10" value="1">
+        Sim
+      </label>
+
+      <label>
+        <input type="radio" name="q10" value="0">
+        Não
+      </label>
+
+    </div>
+
+
+    <!-- BOTÃO -->
+
+    <button onclick="calcularResultado()">
+      Ver meu resultado 🚀
+    </button>
+
+
+    <!-- RESULTADO -->
+
+    <div id="resultado"></div>
+
+
+    <a class="voltar" href="index.html">
+      ← Voltar para o início
+    </a>
+
+  </div>
+
+
+  <script>
+
+    function calcularResultado() {
+
+      let pontos = 0;
+
+      for (let i = 1; i <= 10; i++) {
+
+        let resposta = document.querySelector(
+          'input[name="q' + i + '"]:checked'
+        );
+
+        if (resposta) {
+          pontos += Number(resposta.value);
+        }
+
+      }
+
+      let resultado = document.getElementById("resultado");
+
+      resultado.style.display = "block";
+
+
+      if (pontos <= 3) {
+
+        resultado.innerHTML = `
+          <h2>🌱 Você está começando!</h2>
+
+          <p>
+            Você ainda pode aprender bastante sobre
+            tecnologia, cursos e preparação para o
+            mercado de trabalho.
+          </p>
+        `;
+
+      }
+
+      else if (pontos <= 6) {
+
+        resultado.innerHTML = `
+          <h2>🚀 Você está no caminho!</h2>
+
+          <p>
+            Você já possui alguns conhecimentos importantes,
+            mas ainda pode desenvolver novas habilidades.
+          </p>
+        `;
+
+      }
+
+      else if (pontos <= 8) {
+
+        resultado.innerHTML = `
+          <h2>⭐ Muito bem!</h2>
+
+          <p>
+            Você está se preparando para o futuro e
+            já possui bons conhecimentos.
+          </p>
+        `;
+
+      }
+
+      else {
+
+        resultado.innerHTML = `
+          <h2>🏆 Cidadão do Futuro!</h2>
+
+          <p>
+            Você demonstra estar bastante preparado
+            para o mundo profissional e digital!
+          </p>
+        `;
+
+      }
+
+    }
+
+  </script>
 
 </body>
+
 </html>
+```
