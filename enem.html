@@ -45,21 +45,39 @@
       object-fit: contain;
     }
 
+    /* MENU */
     nav {
-      text-align: center;
-      padding: 12px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 15px;
       background: #020617;
+      border-top: 1px solid #1e293b;
+      border-bottom: 1px solid #1e293b;
     }
 
     nav a {
-      color: white;
-      margin: 8px;
+      color: #e2e8f0;
+      padding: 9px 13px;
+      margin: 0;
       text-decoration: none;
+      border-radius: 8px;
+      font-size: 15px;
       transition: 0.3s;
     }
 
     nav a:hover {
+      background: #1e293b;
       color: #c084fc;
+      transform: translateY(-2px);
+    }
+
+    nav a.ativo {
+      background: #7c3aed;
+      color: white;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
     }
 
     .banner {
@@ -235,9 +253,14 @@
         height: 55px;
       }
 
+      nav {
+        gap: 4px;
+        padding: 8px;
+      }
+
       nav a {
-        display: inline-block;
-        margin: 6px;
+        font-size: 13px;
+        padding: 8px 9px;
       }
 
       .banner {
@@ -280,15 +303,13 @@
 </header>
 
 <nav>
-
   <a href="index.html">🏠 Início</a>
   <a href="curriculo.html">📄 Currículo</a>
   <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
   <a href="cursos.html">🎓 Cursos Gratuitos</a>
   <a href="ebooks.html">📚 E-books Gratuitos</a>
-  <a href="enem.html">🎓 ENEM</a>
+  <a href="enem.html" class="ativo">🎓 ENEM</a>
   <a href="quiz.html">🎯 Quiz</a>
-
 </nav>
 
 <section class="banner">
@@ -311,11 +332,9 @@
 <div class="container">
 
   <p class="intro">
-
     O ENEM avalia conhecimentos de diferentes áreas
     do ensino médio. Use esta página como ponto de partida
     para organizar sua preparação.
-
   </p>
 
   <div class="section">
@@ -326,7 +345,6 @@
 
       <div class="card">
         <h3>📝 Linguagens</h3>
-
         <p>
           Língua Portuguesa, Literatura, interpretação de textos,
           língua estrangeira, Artes, Educação Física e tecnologias.
@@ -335,7 +353,6 @@
 
       <div class="card">
         <h3>🌎 Ciências Humanas</h3>
-
         <p>
           História, Geografia, Filosofia e Sociologia,
           além da interpretação de mapas, gráficos e documentos.
@@ -344,7 +361,6 @@
 
       <div class="card">
         <h3>🧪 Ciências da Natureza</h3>
-
         <p>
           Biologia, Química e Física, com questões
           relacionadas a fenômenos e situações do cotidiano.
@@ -353,7 +369,6 @@
 
       <div class="card">
         <h3>➗ Matemática</h3>
-
         <p>
           Matemática e suas tecnologias, incluindo
           porcentagem, funções, geometria, estatística e probabilidade.
@@ -362,7 +377,6 @@
 
       <div class="card">
         <h3>✍️ Redação</h3>
-
         <p>
           Produção de um texto dissertativo-argumentativo
           de acordo com a proposta apresentada na prova.
@@ -446,7 +460,6 @@
       <a
         href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/outros-documentos"
         target="_blank"
-        rel="noopener noreferrer"
         class="botao"
       >
         Ver materiais oficiais do ENEM
@@ -463,9 +476,7 @@
     <div class="cards">
 
       <div class="card">
-
         <h3>➗ Matemática</h3>
-
         <p>
           Aulas e revisões de matemática para
           reforçar os principais conteúdos.
@@ -474,18 +485,14 @@
         <a
           href="https://www.youtube.com/results?search_query=matem%C3%A1tica+ENEM"
           target="_blank"
-          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
-
       </div>
 
       <div class="card">
-
         <h3>📝 Português</h3>
-
         <p>
           Revisões de Língua Portuguesa,
           interpretação e conteúdos importantes.
@@ -494,18 +501,14 @@
         <a
           href="https://www.youtube.com/results?search_query=portugu%C3%AAs+ENEM"
           target="_blank"
-          rel="noopener noreferrer"
           class="botao"
         >
           Ver aulas
         </a>
-
       </div>
 
       <div class="card">
-
         <h3>🧪 Ciências da Natureza</h3>
-
         <p>
           Encontre aulas de Física, Química
           e Biologia voltadas para o ENEM.
@@ -514,18 +517,14 @@
         <a
           href="https://www.youtube.com/results?search_query=ci%C3%AAncias+da+natureza+ENEM"
           target="_blank"
-          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
-
       </div>
 
       <div class="card">
-
         <h3>🌎 Humanas</h3>
-
         <p>
           Revisões de História, Geografia,
           Filosofia e Sociologia.
@@ -534,18 +533,14 @@
         <a
           href="https://www.youtube.com/results?search_query=ci%C3%AAncias+humanas+ENEM"
           target="_blank"
-          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
-
       </div>
 
       <div class="card">
-
         <h3>✍️ Redação</h3>
-
         <p>
           Aulas e dicas para melhorar a estrutura,
           argumentação e repertório.
@@ -554,12 +549,10 @@
         <a
           href="https://www.youtube.com/results?search_query=reda%C3%A7%C3%A3o+ENEM"
           target="_blank"
-          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
-
       </div>
 
     </div>
@@ -581,7 +574,6 @@
       <a
         href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
         target="_blank"
-        rel="noopener noreferrer"
         class="botao"
       >
         Acessar o Inep
@@ -594,9 +586,7 @@
 </div>
 
 <footer>
-
   Cidadão do Futuro | Educação para a Cidadania
-
 </footer>
 
 </body>
