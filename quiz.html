@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,8 +20,6 @@
       background: #0f172a;
       color: white;
     }
-
-    /* CABEÇALHO */
 
     header {
       background: #020617;
@@ -46,8 +45,6 @@
       object-fit: contain;
     }
 
-    /* MENU */
-
     nav {
       text-align: center;
       padding: 12px;
@@ -65,26 +62,25 @@
       color: #c084fc;
     }
 
-    /* BANNER */
+    .banner {
+      padding: 70px 20px;
+      text-align: center;
 
-.banner {
-  padding: 70px 20px;
-  text-align: center;
+      background-image:
+        linear-gradient(
+          rgba(15, 23, 42, 0.45),
+          rgba(30, 27, 75, 0.55)
+        ),
+        url("fundo-tecnologia.png");
 
-  background-image:
-    linear-gradient(
-      rgba(15, 23, 42, 0.45),
-      rgba(30, 27, 75, 0.55)
-    ),
-    url("fundo-tecnologia.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
 
-  position: relative;
-  overflow: hidden;
-}
     .banner h1 {
       font-size: 40px;
       margin: 0 0 15px;
@@ -95,17 +91,14 @@
       color: #e9d5ff;
       max-width: 700px;
       margin: auto;
+      line-height: 1.6;
     }
-
-    /* CONTAINER */
 
     .container {
       width: 90%;
       max-width: 900px;
       margin: 40px auto;
     }
-
-    /* INTRODUÇÃO */
 
     .intro {
       background: #1e293b;
@@ -124,8 +117,6 @@
       color: #cbd5e1;
       line-height: 1.6;
     }
-
-    /* PERGUNTAS */
 
     .pergunta {
       background: #1e293b;
@@ -163,8 +154,6 @@
       accent-color: #a855f7;
     }
 
-    /* BOTÃO */
-
     .area-botao {
       text-align: center;
       margin: 35px 0;
@@ -186,8 +175,6 @@
       background: #9333ea;
       transform: translateY(-2px);
     }
-
-    /* RESULTADO */
 
     #resultado {
       display: none;
@@ -249,8 +236,6 @@
       color: white;
     }
 
-    /* RODAPÉ */
-
     footer {
       text-align: center;
       padding: 20px;
@@ -258,8 +243,6 @@
       margin-top: 50px;
       color: #cbd5e1;
     }
-
-    /* CELULAR */
 
     @media (max-width: 600px) {
 
@@ -304,8 +287,6 @@
 
 <body>
 
-  <!-- CABEÇALHO -->
-
   <header>
 
     <img
@@ -318,29 +299,17 @@
 
   </header>
 
-
-  <!-- MENU -->
-
   <nav>
 
     <a href="index.html">🏠 Início</a>
-
     <a href="curriculo.html">📄 Currículo</a>
-
     <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
-
     <a href="cursos.html">🎓 Cursos Gratuitos</a>
-
     <a href="ebooks.html">📚 E-books Gratuitos</a>
-
     <a href="enem.html">🎓 ENEM</a>
-
     <a href="quiz.html">🎯 Quiz</a>
 
   </nav>
-
-
-  <!-- BANNER -->
 
   <section class="banner">
 
@@ -354,11 +323,7 @@
 
   </section>
 
-
   <main class="container">
-
-
-    <!-- INTRODUÇÃO -->
 
     <div class="intro">
 
@@ -377,9 +342,6 @@
       </p>
 
     </div>
-
-
-    <!-- PERGUNTA 1 -->
 
     <div class="pergunta">
 
@@ -412,9 +374,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 2 -->
-
     <div class="pergunta">
 
       <h3>2️⃣ Em um trabalho em grupo, qual função você prefere?</h3>
@@ -445,9 +404,6 @@
       </label>
 
     </div>
-
-
-    <!-- PERGUNTA 3 -->
 
     <div class="pergunta">
 
@@ -480,9 +436,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 4 -->
-
     <div class="pergunta">
 
       <h3>4️⃣ Qual ambiente de trabalho parece mais interessante?</h3>
@@ -513,9 +466,6 @@
       </label>
 
     </div>
-
-
-    <!-- PERGUNTA 5 -->
 
     <div class="pergunta">
 
@@ -548,9 +498,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 6 -->
-
     <div class="pergunta">
 
       <h3>6️⃣ Qual característica combina mais com você?</h3>
@@ -581,9 +528,6 @@
       </label>
 
     </div>
-
-
-    <!-- PERGUNTA 7 -->
 
     <div class="pergunta">
 
@@ -616,9 +560,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 8 -->
-
     <div class="pergunta">
 
       <h3>8️⃣ Qual dessas profissões mais chama sua atenção?</h3>
@@ -650,9 +591,6 @@
 
     </div>
 
-
-    <!-- BOTÃO -->
-
     <div class="area-botao">
 
       <button onclick="calcularResultado()">
@@ -661,23 +599,15 @@
 
     </div>
 
-
-    <!-- RESULTADO -->
-
     <div id="resultado"></div>
 
-
   </main>
-
-
-  <!-- RODAPÉ -->
 
   <footer>
 
     Cidadão do Futuro | Educação para a Cidadania
 
   </footer>
-
 
   <script>
 
@@ -695,7 +625,6 @@
 
       let respondeuTudo = true;
 
-
       for (let i = 1; i <= perguntas; i++) {
 
         const resposta = document.querySelector(
@@ -710,7 +639,6 @@
 
       }
 
-
       if (!respondeuTudo) {
 
         alert(
@@ -718,9 +646,7 @@
         );
 
         return;
-
       }
-
 
       let maior = Math.max(
         pontos.tecnologia,
@@ -730,9 +656,7 @@
         pontos.educacao
       );
 
-
       let perfil = "";
-
 
       if (pontos.tecnologia === maior) {
 
@@ -761,7 +685,6 @@
 
       }
 
-
       else if (pontos.saude === maior) {
 
         perfil = `
@@ -787,7 +710,6 @@
         `;
 
       }
-
 
       else if (pontos.criatividade === maior) {
 
@@ -815,7 +737,6 @@
 
       }
 
-
       else if (pontos.negocios === maior) {
 
         perfil = `
@@ -840,7 +761,6 @@
         `;
 
       }
-
 
       else {
 
@@ -867,7 +787,6 @@
         `;
 
       }
-
 
       const resultado = document.getElementById("resultado");
 
@@ -897,5 +816,4 @@
   </script>
 
 </body>
-
 </html>
