@@ -29,7 +29,8 @@
       font-weight: bold;
       color: #a855f7;
       position: relative;
-      min-height: 55px;
+      min-height: 60px;
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -45,22 +46,51 @@
       object-fit: contain;
     }
 
+    /* MENU PROFISSIONAL */
+
     nav {
-      text-align: center;
-      padding: 12px 10px;
       background: #020617;
+      padding: 12px 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      border-top: 1px solid rgba(168, 85, 247, 0.15);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.25);
     }
 
     nav a {
-      color: white;
-      margin: 8px;
+      color: #e2e8f0;
       text-decoration: none;
-      transition: 0.3s;
+
+      padding: 10px 14px;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      transition: all 0.25s ease;
     }
 
     nav a:hover {
+      background: #1e293b;
       color: #c084fc;
+      transform: translateY(-2px);
     }
+
+    nav a.ativo {
+      background: linear-gradient(135deg, #7e22ce, #a855f7);
+      color: white;
+
+      box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+    }
+
+    /* BANNER */
 
     .banner {
       min-height: 400px;
@@ -115,6 +145,8 @@
       font-size: 18px;
     }
 
+    /* CONTEÚDO */
+
     .container {
       padding: 35px 20px;
       max-width: 950px;
@@ -128,6 +160,12 @@
       margin-bottom: 20px;
 
       box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
     }
 
     .card h2 {
@@ -166,6 +204,8 @@
       line-height: 1.6;
     }
 
+    /* RODAPÉ */
+
     footer {
       text-align: center;
       padding: 20px;
@@ -173,6 +213,8 @@
       margin-top: 40px;
       color: #cbd5e1;
     }
+
+    /* CELULAR */
 
     @media (max-width: 600px) {
 
@@ -187,9 +229,14 @@
         height: 55px;
       }
 
+      nav {
+        padding: 10px;
+        gap: 5px;
+      }
+
       nav a {
-        display: inline-block;
-        margin: 6px;
+        font-size: 13px;
+        padding: 8px 10px;
       }
 
       .banner {
@@ -230,13 +277,33 @@
 
 <nav>
 
-  <a href="index.html">🏠 Início</a>
-  <a href="curriculo.html">📄 Currículo</a>
-  <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
-  <a href="cursos.html">🎓 Cursos Gratuitos</a>
-  <a href="ebooks.html">📚 E-books Gratuitos</a>
-  <a href="enem.html">🎓 ENEM</a>
-  <a href="quiz.html">🎯 Quiz</a>
+  <a href="index.html">
+    🏠 Início
+  </a>
+
+  <a href="curriculo.html">
+    📄 Currículo
+  </a>
+
+  <a href="primeiro-emprego.html" class="ativo">
+    💼 Primeiro Emprego
+  </a>
+
+  <a href="cursos.html">
+    🎓 Cursos Gratuitos
+  </a>
+
+  <a href="ebooks.html">
+    📚 E-books
+  </a>
+
+  <a href="enem.html">
+    🎓 ENEM
+  </a>
+
+  <a href="quiz.html">
+    🎯 Quiz
+  </a>
 
 </nav>
 
