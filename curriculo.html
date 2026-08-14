@@ -9,6 +9,10 @@
 
   <style>
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -18,23 +22,39 @@
 
     header {
       background: #020617;
-      padding: 15px;
+      padding: 12px 20px;
       text-align: center;
       font-size: 22px;
       font-weight: bold;
       color: #a855f7;
+      position: relative;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-escola {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
     }
 
     nav {
       text-align: center;
-      padding: 15px;
+      padding: 12px 10px;
       background: #020617;
     }
 
     nav a {
       color: white;
-      margin: 10px;
+      margin: 8px;
       text-decoration: none;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -42,30 +62,84 @@
     }
 
     .banner {
-      padding: 50px 20px;
+      min-height: 400px;
+      padding: 40px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       text-align: center;
-      background: linear-gradient(to right, #1e1b4b, #6d28d9);
+
+      background-image:
+        linear-gradient(
+          rgba(15, 23, 42, 0.30),
+          rgba(30, 27, 75, 0.35)
+        ),
+        url("fundo-tecnologia.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      position: relative;
+    }
+
+    .banner-conteudo {
+      max-width: 750px;
+      padding: 35px;
+
+      background: rgba(15, 23, 42, 0.55);
+
+      border: 1px solid rgba(192, 132, 252, 0.4);
+
+      border-radius: 20px;
+
+      backdrop-filter: blur(5px);
+
+      box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    }
+
+    .banner-conteudo small {
+      color: #e9d5ff;
+      letter-spacing: 2px;
+      font-weight: bold;
     }
 
     .banner h1 {
-      font-size: 38px;
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    .banner p {
+      color: #ddd6fe;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .container {
-      padding: 30px;
-      max-width: 900px;
+      padding: 35px 20px;
+      max-width: 950px;
       margin: auto;
     }
 
     .card {
       background: #1e293b;
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 15px;
       margin-bottom: 20px;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.25);
     }
 
     .card h2 {
       color: #c084fc;
+    }
+
+    .card p,
+    .card li {
+      color: #cbd5e1;
+      line-height: 1.6;
     }
 
     li {
@@ -73,10 +147,14 @@
     }
 
     .dica {
-      background: #312e81;
-      padding: 20px;
-      border-radius: 10px;
+      background: linear-gradient(135deg, #312e81, #4c1d95);
+      padding: 25px;
+      border-radius: 15px;
       margin-top: 20px;
+    }
+
+    .dica h2 {
+      color: #e9d5ff;
     }
 
     footer {
@@ -84,6 +162,43 @@
       padding: 20px;
       background: #020617;
       margin-top: 40px;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        font-size: 18px;
+        padding-left: 85px;
+      }
+
+      .logo-escola {
+        left: 10px;
+        width: 55px;
+        height: 55px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .banner {
+        min-height: 360px;
+        padding: 25px 15px;
+      }
+
+      .banner-conteudo {
+        padding: 25px 18px;
+      }
+
+      .banner h1 {
+        font-size: 30px;
+      }
+
+      .container {
+        padding: 25px 15px;
+      }
     }
 
   </style>
@@ -92,27 +207,48 @@
 <body>
 
 <header>
+
+  <img
+    src="file_00000000e480820e841c368002932697.png"
+    alt="Logo da Escola de Ensino Médio Padre Coriolano"
+    class="logo-escola"
+  >
+
   🤖 Cidadão do Futuro
+
 </header>
 
+
 <nav>
+
   <a href="index.html">🏠 Início</a>
   <a href="curriculo.html">📄 Currículo</a>
   <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
   <a href="cursos.html">🎓 Cursos Gratuitos</a>
+  <a href="ebooks.html">📚 E-books Gratuitos</a>
+  <a href="enem.html">🎓 ENEM</a>
   <a href="quiz.html">🎯 Quiz</a>
+
 </nav>
+
 
 <section class="banner">
 
-  <h1>📄 Como fazer um bom currículo?</h1>
+  <div class="banner-conteudo">
 
-  <p>
-    Seu currículo é uma das primeiras formas de apresentar
-    suas habilidades para uma empresa.
-  </p>
+    <small>PREPARAÇÃO PARA O FUTURO</small>
+
+    <h1>📄 Como fazer um bom currículo?</h1>
+
+    <p>
+      Seu currículo é uma das primeiras formas de apresentar
+      suas habilidades para uma empresa.
+    </p>
+
+  </div>
 
 </section>
+
 
 <div class="container">
 
@@ -128,6 +264,7 @@
 
   </div>
 
+
   <div class="card">
 
     <h2>📝 O que colocar no currículo?</h2>
@@ -135,20 +272,16 @@
     <ul>
 
       <li>👤 Nome e informações de contato</li>
-
       <li>🎓 Formação escolar</li>
-
       <li>📚 Cursos realizados</li>
-
       <li>💻 Conhecimentos de informática</li>
-
       <li>⭐ Habilidades pessoais</li>
-
       <li>💼 Experiências profissionais, quando houver</li>
 
     </ul>
 
   </div>
+
 
   <div class="card">
 
@@ -157,18 +290,15 @@
     <ul>
 
       <li>❌ Mentir sobre experiências ou cursos</li>
-
       <li>❌ Colocar informações desnecessárias</li>
-
       <li>❌ Erros de português</li>
-
       <li>❌ Usar um currículo muito longo</li>
-
       <li>❌ Colocar informações pessoais que não são necessárias</li>
 
     </ul>
 
   </div>
+
 
   <div class="dica">
 
@@ -184,10 +314,10 @@
 
 </div>
 
+
 <footer>
-  Trabalho Escolar | Educação para a Cidadania
+  Cidadão do Futuro | Educação para a Cidadania
 </footer>
 
 </body>
 </html>
-```
