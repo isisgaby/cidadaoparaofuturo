@@ -1,37 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Quiz - Cidadão do Futuro</title>
 
   <style>
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
+    }
+
+    header {
+      background: #020617;
+      padding: 12px 20px;
       text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #a855f7;
+      position: relative;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-escola {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    nav {
+      text-align: center;
+      padding: 12px 10px;
+      background: #020617;
+    }
+
+    nav a {
+      color: white;
+      margin: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #c084fc;
+    }
+
+    .banner {
+      min-height: 330px;
+      padding: 40px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background-image:
+        linear-gradient(
+          rgba(15, 23, 42, 0.30),
+          rgba(30, 27, 75, 0.35)
+        ),
+        url("fundo-tecnologia.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .banner-conteudo {
+      max-width: 750px;
       padding: 30px;
+
+      background: rgba(15, 23, 42, 0.55);
+
+      border: 1px solid rgba(192, 132, 252, 0.4);
+
+      border-radius: 20px;
+
+      backdrop-filter: blur(5px);
+
+      box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    }
+
+    .banner small {
+      color: #e9d5ff;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .banner h1 {
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    .banner p {
+      color: #ddd6fe;
+      font-size: 18px;
+    }
+
+    .quiz-container {
+      max-width: 850px;
+      margin: auto;
+      padding: 35px 20px;
     }
 
     .quiz-box {
       background: #1e293b;
       padding: 30px;
-      border-radius: 12px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    h1 {
-      color: #c084fc;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
 
     .pergunta {
       text-align: left;
-      margin-top: 30px;
+      margin-top: 25px;
       padding: 20px;
       background: #334155;
       border-radius: 10px;
@@ -39,57 +138,165 @@
 
     .pergunta h3 {
       margin-top: 0;
+      color: #e9d5ff;
     }
 
     label {
       display: block;
       margin: 12px 0;
-      padding: 10px;
+      padding: 12px;
       background: #475569;
       border-radius: 8px;
       cursor: pointer;
+      transition: 0.3s;
     }
 
     label:hover {
       background: #64748b;
     }
 
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
     button {
-      padding: 12px 25px;
-      margin-top: 25px;
+      display: block;
+
+      padding: 13px 25px;
+
+      margin: 30px auto 0;
+
       border: none;
+
       border-radius: 8px;
+
       background: #a855f7;
+
       color: white;
+
       cursor: pointer;
+
       font-size: 16px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
     }
 
     button:hover {
       background: #9333ea;
+      transform: scale(1.03);
     }
 
     #resultado {
       display: none;
+
       margin-top: 25px;
-      padding: 20px;
-      background: #312e81;
-      border-radius: 10px;
+
+      padding: 25px;
+
+      background: linear-gradient(135deg, #312e81, #4c1d95);
+
+      border-radius: 12px;
+
+      text-align: center;
     }
 
-    .voltar {
-      display: inline-block;
-      margin-top: 20px;
-      color: #c084fc;
-      text-decoration: none;
+    #resultado h2 {
+      color: #e9d5ff;
+    }
+
+    #resultado p {
+      color: #ddd6fe;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 40px;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        font-size: 18px;
+        padding-left: 85px;
+      }
+
+      .logo-escola {
+        left: 10px;
+        width: 55px;
+        height: 55px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .banner {
+        min-height: 300px;
+      }
+
+      .banner-conteudo {
+        padding: 25px 18px;
+      }
+
+      .banner h1 {
+        font-size: 30px;
+      }
+
+      .quiz-container {
+        padding: 25px 15px;
+      }
+
+      .quiz-box {
+        padding: 20px 15px;
+      }
+
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <div class="quiz-box">
+
+<header>
+
+  <img
+    src="file_00000000e480820e841c368002932697.png"
+    alt="Logo da Escola de Ensino Médio Padre Coriolano"
+    class="logo-escola"
+  >
+
+  🤖 Cidadão do Futuro
+
+</header>
+
+
+<nav>
+
+  <a href="index.html">🏠 Início</a>
+  <a href="curriculo.html">📄 Currículo</a>
+  <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
+  <a href="cursos.html">🎓 Cursos Gratuitos</a>
+  <a href="ebooks.html">📚 E-books Gratuitos</a>
+  <a href="enem.html">🎓 ENEM</a>
+  <a href="quiz.html">🎯 Quiz</a>
+
+</nav>
+
+
+<section class="banner">
+
+  <div class="banner-conteudo">
+
+    <small>DESAFIE SEUS CONHECIMENTOS</small>
 
     <h1>🎯 Quiz de Tecnologia</h1>
 
@@ -98,8 +305,15 @@
       para o mundo profissional e digital!
     </p>
 
+  </div>
 
-    <!-- PERGUNTA 1 -->
+</section>
+
+
+<div class="quiz-container">
+
+  <div class="quiz-box">
+
 
     <div class="pergunta">
 
@@ -118,8 +332,6 @@
     </div>
 
 
-    <!-- PERGUNTA 2 -->
-
     <div class="pergunta">
 
       <h3>2. Você já fez algum curso profissionalizante?</h3>
@@ -136,8 +348,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 3 -->
 
     <div class="pergunta">
 
@@ -156,8 +366,6 @@
     </div>
 
 
-    <!-- PERGUNTA 4 -->
-
     <div class="pergunta">
 
       <h3>4. Você sabe criar um e-mail profissional?</h3>
@@ -174,8 +382,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 5 -->
 
     <div class="pergunta">
 
@@ -194,8 +400,6 @@
     </div>
 
 
-    <!-- PERGUNTA 6 -->
-
     <div class="pergunta">
 
       <h3>6. Você sabe procurar uma vaga de emprego pela internet?</h3>
@@ -212,8 +416,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 7 -->
 
     <div class="pergunta">
 
@@ -232,8 +434,6 @@
     </div>
 
 
-    <!-- PERGUNTA 8 -->
-
     <div class="pergunta">
 
       <h3>8. Você verifica se uma informação é verdadeira antes de compartilhá-la?</h3>
@@ -250,8 +450,6 @@
 
     </div>
 
-
-    <!-- PERGUNTA 9 -->
 
     <div class="pergunta">
 
@@ -270,8 +468,6 @@
     </div>
 
 
-    <!-- PERGUNTA 10 -->
-
     <div class="pergunta">
 
       <h3>10. Você gostaria de aprender mais sobre tecnologia?</h3>
@@ -289,106 +485,110 @@
     </div>
 
 
-    <!-- BOTÃO -->
-
     <button onclick="calcularResultado()">
       Ver meu resultado 🚀
     </button>
 
 
-    <!-- RESULTADO -->
-
     <div id="resultado"></div>
-
-
-    <a class="voltar" href="index.html">
-      ← Voltar para o início
-    </a>
 
   </div>
 
-
-  <script>
-
-    function calcularResultado() {
-
-      let pontos = 0;
-
-      for (let i = 1; i <= 10; i++) {
-
-        let resposta = document.querySelector(
-          'input[name="q' + i + '"]:checked'
-        );
-
-        if (resposta) {
-          pontos += Number(resposta.value);
-        }
-
-      }
-
-      let resultado = document.getElementById("resultado");
-
-      resultado.style.display = "block";
+</div>
 
 
-      if (pontos <= 3) {
+<footer>
 
-        resultado.innerHTML = `
-          <h2>🌱 Você está começando!</h2>
+  Cidadão do Futuro | Educação para a Cidadania
 
-          <p>
-            Você ainda pode aprender bastante sobre
-            tecnologia, cursos e preparação para o
-            mercado de trabalho.
-          </p>
-        `;
+</footer>
 
-      }
 
-      else if (pontos <= 6) {
+<script>
 
-        resultado.innerHTML = `
-          <h2>🚀 Você está no caminho!</h2>
+  function calcularResultado() {
 
-          <p>
-            Você já possui alguns conhecimentos importantes,
-            mas ainda pode desenvolver novas habilidades.
-          </p>
-        `;
+    let pontos = 0;
 
-      }
+    for (let i = 1; i <= 10; i++) {
 
-      else if (pontos <= 8) {
+      let resposta = document.querySelector(
+        'input[name="q' + i + '"]:checked'
+      );
 
-        resultado.innerHTML = `
-          <h2>⭐ Muito bem!</h2>
-
-          <p>
-            Você está se preparando para o futuro e
-            já possui bons conhecimentos.
-          </p>
-        `;
-
-      }
-
-      else {
-
-        resultado.innerHTML = `
-          <h2>🏆 Cidadão do Futuro!</h2>
-
-          <p>
-            Você demonstra estar bastante preparado
-            para o mundo profissional e digital!
-          </p>
-        `;
-
+      if (resposta) {
+        pontos += Number(resposta.value);
       }
 
     }
 
-  </script>
+    let resultado = document.getElementById("resultado");
+
+    resultado.style.display = "block";
+
+
+    if (pontos <= 3) {
+
+      resultado.innerHTML = `
+        <h2>🌱 Você está começando!</h2>
+
+        <p>
+          Você ainda pode aprender bastante sobre
+          tecnologia, cursos e preparação para o
+          mercado de trabalho.
+        </p>
+      `;
+
+    }
+
+    else if (pontos <= 6) {
+
+      resultado.innerHTML = `
+        <h2>🚀 Você está no caminho!</h2>
+
+        <p>
+          Você já possui alguns conhecimentos importantes,
+          mas ainda pode desenvolver novas habilidades.
+        </p>
+      `;
+
+    }
+
+    else if (pontos <= 8) {
+
+      resultado.innerHTML = `
+        <h2>⭐ Muito bem!</h2>
+
+        <p>
+          Você está se preparando para o futuro e
+          já possui bons conhecimentos.
+        </p>
+      `;
+
+    }
+
+    else {
+
+      resultado.innerHTML = `
+        <h2>🏆 Cidadão do Futuro!</h2>
+
+        <p>
+          Você demonstra estar bastante preparado
+          para o mundo profissional e digital!
+        </p>
+      `;
+
+    }
+
+    resultado.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+  }
+
+</script>
+
 
 </body>
-
 </html>
-
