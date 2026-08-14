@@ -21,6 +21,10 @@
       color: white;
     }
 
+    /* =========================
+       CABEÇALHO
+    ========================= */
+
     header {
       background: #020617;
       padding: 12px 20px;
@@ -29,7 +33,8 @@
       font-weight: bold;
       color: #a855f7;
       position: relative;
-      min-height: 55px;
+      min-height: 60px;
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -45,34 +50,55 @@
       object-fit: contain;
     }
 
-    /* MENU */
-  nav {
-  text-align: center;
-  padding: 12px 10px;
-  background: #020617;
-}
+    /* =========================
+       MENU PROFISSIONAL
+    ========================= */
 
-nav a {
-  display: inline-block;
-  margin: 6px 3px;
-  padding: 7px 9px;
-  padding: 8px 12px;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
+    nav {
+      background: #020617;
+      padding: 12px 20px;
 
-nav a:hover {
-  color: #ffffff;
-  background: #a855f7;
-  transform: translateY(-2px);
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      border-top: 1px solid rgba(168, 85, 247, 0.15);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.25);
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+
+      padding: 10px 14px;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: #1e293b;
+      color: #c084fc;
+      transform: translateY(-2px);
+    }
 
     nav a.ativo {
-      background: #7c3aed;
+      background: linear-gradient(135deg, #7e22ce, #a855f7);
       color: white;
-      box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
+
+      box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
     }
+
+    /* =========================
+       BANNER
+    ========================= */
 
     .banner {
       min-height: 400px;
@@ -94,6 +120,8 @@ nav a:hover {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
+      position: relative;
     }
 
     .banner-conteudo {
@@ -127,6 +155,10 @@ nav a:hover {
       font-size: 18px;
       line-height: 1.6;
     }
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
 
     .container {
       padding: 35px 20px;
@@ -185,15 +217,23 @@ nav a:hover {
       line-height: 1.5;
     }
 
+    /* =========================
+       BOTÕES
+    ========================= */
+
     .botao {
       display: inline-block;
       margin-top: 15px;
       padding: 10px 18px;
+
       background: #a855f7;
       color: white;
+
       text-decoration: none;
       border-radius: 8px;
+
       font-weight: bold;
+
       transition: 0.3s;
     }
 
@@ -202,43 +242,68 @@ nav a:hover {
       transform: scale(1.03);
     }
 
+    /* =========================
+       LISTA
+    ========================= */
+
     .lista {
       background: #1e293b;
       padding: 25px;
       border-radius: 15px;
+
       color: #cbd5e1;
       line-height: 1.8;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.25);
     }
 
     .lista strong {
       color: white;
     }
 
+    /* =========================
+       REDAÇÃO
+    ========================= */
+
     .redacao {
       background: #1e293b;
       padding: 25px;
       border-radius: 15px;
+
       line-height: 1.7;
       color: #cbd5e1;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.25);
     }
 
     .redacao h3 {
       color: #a855f7;
     }
 
+    /* =========================
+       RODAPÉ
+    ========================= */
+
     footer {
       text-align: center;
       padding: 20px;
+
       background: #020617;
       margin-top: 40px;
+
       color: #cbd5e1;
     }
+
+    /* =========================
+       CELULAR
+    ========================= */
 
     @media (max-width: 600px) {
 
       header {
         font-size: 18px;
         padding-left: 85px;
+        padding-right: 15px;
       }
 
       .logo-escola {
@@ -248,17 +313,18 @@ nav a:hover {
       }
 
       nav {
-        gap: 4px;
-        padding: 8px;
+        padding: 10px;
+        gap: 5px;
       }
 
       nav a {
         font-size: 13px;
-        padding: 8px 9px;
+        padding: 8px 10px;
       }
 
       .banner {
         min-height: 360px;
+        padding: 25px 15px;
       }
 
       .banner-conteudo {
@@ -276,6 +342,7 @@ nav a:hover {
       .card {
         width: 100%;
       }
+
     }
 
   </style>
@@ -296,15 +363,39 @@ nav a:hover {
 
 </header>
 
+
 <nav>
-  <a href="index.html">🏠 Início</a>
-  <a href="curriculo.html">📄 Currículo</a>
-  <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
-  <a href="cursos.html">🎓 Cursos Gratuitos</a>
-  <a href="ebooks.html">📚 E-books Gratuitos</a>
-  <a href="enem.html" class="ativo">🎓 ENEM</a>
-  <a href="quiz.html">🎯 Quiz</a>
+
+  <a href="index.html">
+    🏠 Início
+  </a>
+
+  <a href="curriculo.html">
+    📄 Currículo
+  </a>
+
+  <a href="primeiro-emprego.html">
+    💼 Primeiro Emprego
+  </a>
+
+  <a href="cursos.html">
+    🎓 Cursos Gratuitos
+  </a>
+
+  <a href="ebooks.html">
+    📚 E-books
+  </a>
+
+  <a href="enem.html" class="ativo">
+    🎓 ENEM
+  </a>
+
+  <a href="quiz.html">
+    🎯 Quiz
+  </a>
+
 </nav>
+
 
 <section class="banner">
 
@@ -323,6 +414,7 @@ nav a:hover {
 
 </section>
 
+
 <div class="container">
 
   <p class="intro">
@@ -331,6 +423,7 @@ nav a:hover {
     para organizar sua preparação.
   </p>
 
+
   <div class="section">
 
     <h2>📚 O que é cobrado no ENEM?</h2>
@@ -338,48 +431,68 @@ nav a:hover {
     <div class="cards">
 
       <div class="card">
+
         <h3>📝 Linguagens</h3>
+
         <p>
           Língua Portuguesa, Literatura, interpretação de textos,
           língua estrangeira, Artes, Educação Física e tecnologias.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <h3>🌎 Ciências Humanas</h3>
+
         <p>
           História, Geografia, Filosofia e Sociologia,
           além da interpretação de mapas, gráficos e documentos.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <h3>🧪 Ciências da Natureza</h3>
+
         <p>
           Biologia, Química e Física, com questões
           relacionadas a fenômenos e situações do cotidiano.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <h3>➗ Matemática</h3>
+
         <p>
           Matemática e suas tecnologias, incluindo
           porcentagem, funções, geometria, estatística e probabilidade.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <h3>✍️ Redação</h3>
+
         <p>
           Produção de um texto dissertativo-argumentativo
           de acordo com a proposta apresentada na prova.
         </p>
+
       </div>
 
     </div>
 
   </div>
+
 
   <div class="section">
 
@@ -433,6 +546,7 @@ nav a:hover {
 
   </div>
 
+
   <div class="section">
 
     <h2>✍️ Redação</h2>
@@ -454,6 +568,7 @@ nav a:hover {
       <a
         href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/outros-documentos"
         target="_blank"
+        rel="noopener noreferrer"
         class="botao"
       >
         Ver materiais oficiais do ENEM
@@ -463,14 +578,18 @@ nav a:hover {
 
   </div>
 
+
   <div class="section">
 
     <h2>🎥 Videoaulas e canais para estudar</h2>
 
     <div class="cards">
 
+
       <div class="card">
+
         <h3>➗ Matemática</h3>
+
         <p>
           Aulas e revisões de matemática para
           reforçar os principais conteúdos.
@@ -479,14 +598,19 @@ nav a:hover {
         <a
           href="https://www.youtube.com/results?search_query=matem%C3%A1tica+ENEM"
           target="_blank"
+          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
+
       </div>
 
+
       <div class="card">
+
         <h3>📝 Português</h3>
+
         <p>
           Revisões de Língua Portuguesa,
           interpretação e conteúdos importantes.
@@ -495,14 +619,19 @@ nav a:hover {
         <a
           href="https://www.youtube.com/results?search_query=portugu%C3%AAs+ENEM"
           target="_blank"
+          rel="noopener noreferrer"
           class="botao"
         >
           Ver aulas
         </a>
+
       </div>
 
+
       <div class="card">
+
         <h3>🧪 Ciências da Natureza</h3>
+
         <p>
           Encontre aulas de Física, Química
           e Biologia voltadas para o ENEM.
@@ -511,14 +640,19 @@ nav a:hover {
         <a
           href="https://www.youtube.com/results?search_query=ci%C3%AAncias+da+natureza+ENEM"
           target="_blank"
+          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
+
       </div>
 
+
       <div class="card">
+
         <h3>🌎 Humanas</h3>
+
         <p>
           Revisões de História, Geografia,
           Filosofia e Sociologia.
@@ -527,14 +661,19 @@ nav a:hover {
         <a
           href="https://www.youtube.com/results?search_query=ci%C3%AAncias+humanas+ENEM"
           target="_blank"
+          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
+
       </div>
 
+
       <div class="card">
+
         <h3>✍️ Redação</h3>
+
         <p>
           Aulas e dicas para melhorar a estrutura,
           argumentação e repertório.
@@ -543,15 +682,18 @@ nav a:hover {
         <a
           href="https://www.youtube.com/results?search_query=reda%C3%A7%C3%A3o+ENEM"
           target="_blank"
+          rel="noopener noreferrer"
           class="botao"
         >
           Assistir aulas
         </a>
+
       </div>
 
     </div>
 
   </div>
+
 
   <div class="section">
 
@@ -568,6 +710,7 @@ nav a:hover {
       <a
         href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
         target="_blank"
+        rel="noopener noreferrer"
         class="botao"
       >
         Acessar o Inep
@@ -579,9 +722,14 @@ nav a:hover {
 
 </div>
 
+
 <footer>
+
   Cidadão do Futuro | Educação para a Cidadania
+
 </footer>
 
+
 </body>
+
 </html>
