@@ -41,23 +41,42 @@
       object-fit: contain;
     }
 
+    /* MENU */
     nav {
-      text-align: center;
-      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 15px;
       background: #020617;
+      border-top: 1px solid #1e293b;
+      border-bottom: 1px solid #1e293b;
     }
 
     nav a {
-      color: white;
-      margin: 10px;
+      color: #e2e8f0;
+      padding: 9px 13px;
+      margin: 0;
       text-decoration: none;
+      border-radius: 8px;
+      font-size: 15px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #a855f7;
+      background: #1e293b;
+      color: #c084fc;
+      transform: translateY(-2px);
     }
 
+    nav a.ativo {
+      background: #7c3aed;
+      color: white;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
+    }
+
+    /* BANNER */
     .banner {
       min-height: 430px;
       padding: 40px 20px;
@@ -134,6 +153,7 @@
       line-height: 1.6;
     }
 
+    /* CONTEÚDO */
     .container {
       padding: 30px;
       max-width: 1200px;
@@ -221,9 +241,7 @@
       max-width: 850px;
       border-radius: 15px;
       margin-top: 10px;
-
-      box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     }
 
     .foto-grupo p {
@@ -253,14 +271,20 @@
         height: 55px;
       }
 
+      nav {
+        gap: 4px;
+        padding: 8px;
+      }
+
       nav a {
-        display: inline-block;
-        margin: 6px;
+        font-size: 13px;
+        padding: 8px 9px;
       }
 
       .banner {
         min-height: 380px;
         padding: 30px 15px;
+        background-position: center;
       }
 
       .banner-conteudo {
@@ -304,158 +328,151 @@
 
 <body>
 
-  <header>
+<header>
 
-    <img
-      src="file_00000000e480820e841c368002932697.png"
-      alt="Logo da Escola de Ensino Médio Padre Coriolano"
-      class="logo-escola"
-    >
+  <img
+    src="file_00000000e480820e841c368002932697.png"
+    alt="Logo da Escola de Ensino Médio Padre Coriolano"
+    class="logo-escola"
+  >
 
-    🤖 Cidadão do Futuro
+  🤖 Cidadão do Futuro
 
-  </header>
+</header>
 
-  <nav>
+<nav>
+  <a href="index.html" class="ativo">🏠 Início</a>
+  <a href="curriculo.html">📄 Currículo</a>
+  <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
+  <a href="cursos.html">🎓 Cursos Gratuitos</a>
+  <a href="ebooks.html">📚 E-books Gratuitos</a>
+  <a href="enem.html">🎓 ENEM</a>
+  <a href="quiz.html">🎯 Quiz</a>
+</nav>
 
-    <a href="index.html">🏠 Início</a>
-    <a href="curriculo.html">📄 Currículo</a>
-    <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
-    <a href="cursos.html">🎓 Cursos Gratuitos</a>
-    <a href="ebooks.html">📚 E-books Gratuitos</a>
-    <a href="enem.html">🎓 ENEM</a>
-    <a href="quiz.html">🎯 Quiz</a>
+<section class="banner">
 
-  </nav>
+  <div class="banner-conteudo">
 
-  <section class="banner">
+    <h1>Cidadãos para o futuro</h1>
 
-    <div class="banner-conteudo">
+    <p>Dando um grande passo na sociedade</p>
 
-      <h1>Cidadãos para o futuro</h1>
+    <span class="banner-descricao">
+      Conhecimento para transformar o presente
+      e construir um futuro melhor.
+    </span>
 
+  </div>
+
+</section>
+
+<div class="container">
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Cursos gratuitos</h3>
       <p>
-        Dando um grande passo na sociedade
+        Sites onde você encontrará cursos
+        gratuitos com certificado.
       </p>
-
-      <span class="banner-descricao">
-        Conhecimento para transformar o presente
-        e construir um futuro melhor.
-      </span>
-
     </div>
 
-  </section>
-
-  <div class="container">
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Cursos gratuitos</h3>
-
-        <p>
-          Sites onde você encontrará cursos
-          gratuitos com certificado.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Primeiro emprego</h3>
-
-        <p>
-          Onde devo procurar, o que devo fazer
-          na minha primeira entrevista, tudo isso
-          respondido em um só lugar.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Mostra científica</h3>
-
-        <p>
-          E.E.M. Padre Coriolano
-          <br><br>
-          Turma do 2°C
-        </p>
-      </div>
-
+    <div class="card">
+      <h3>Primeiro emprego</h3>
+      <p>
+        Onde devo procurar, o que devo fazer
+        na minha primeira entrevista, tudo isso
+        respondido em um só lugar.
+      </p>
     </div>
 
-    <div class="section">
-
-      <h2>📍 Tecnologia na Cidadania</h2>
-
+    <div class="card">
+      <h3>Mostra científica</h3>
       <p>
-        A tecnologia está presente no nosso dia a dia
-        ajudando na mobilidade, educação, segurança
-        e comunicação.
-
-        Exemplos incluem semáforos inteligentes,
-        aplicativos de transporte e ensino online.
+        E.E.M. Padre Coriolano
+        <br><br>
+        Turma do 2°C
       </p>
-
-    </div>
-
-    <div class="section">
-
-      <h2>⚠️ Desafios</h2>
-
-      <p>
-        O uso incorreto da tecnologia pode causar
-        problemas como fake news, dependência digital
-        e falta de segurança na internet.
-      </p>
-
-    </div>
-
-    <div class="section">
-
-      <h2>💡 Soluções</h2>
-
-      <p>
-        Devemos usar a tecnologia com consciência,
-        verificando informações e respeitando os outros
-        no ambiente digital.
-      </p>
-
-    </div>
-
-    <div class="quiz">
-
-      <h2>🎯 Quiz</h2>
-
-      <p>
-        Você usa tecnologia de forma consciente?
-      </p>
-
-      <button onclick="window.location.href='quiz.html'">
-        Fazer o Quiz 🚀
-      </button>
-
-    </div>
-
-    <div class="section foto-grupo">
-
-      <h2>📸 Primeira reunião do grupo</h2>
-
-      <img
-        src="grupo.jpeg.jpeg"
-        alt="Grupo reunido durante a primeira reunião do projeto"
-      >
-
-      <p>
-        Primeira reunião do grupo para a realização
-        do projeto Cidadão do Futuro.
-      </p>
-
     </div>
 
   </div>
 
-  <footer>
-    Trabalho Escolar | Educação para a Cidadania
-  </footer>
+  <div class="section">
+
+    <h2>📍 Tecnologia na Cidadania</h2>
+
+    <p>
+      A tecnologia está presente no nosso dia a dia
+      ajudando na mobilidade, educação, segurança
+      e comunicação.
+
+      Exemplos incluem semáforos inteligentes,
+      aplicativos de transporte e ensino online.
+    </p>
+
+  </div>
+
+  <div class="section">
+
+    <h2>⚠️ Desafios</h2>
+
+    <p>
+      O uso incorreto da tecnologia pode causar
+      problemas como fake news, dependência digital
+      e falta de segurança na internet.
+    </p>
+
+  </div>
+
+  <div class="section">
+
+    <h2>💡 Soluções</h2>
+
+    <p>
+      Devemos usar a tecnologia com consciência,
+      verificando informações e respeitando os outros
+      no ambiente digital.
+    </p>
+
+  </div>
+
+  <div class="quiz">
+
+    <h2>🎯 Quiz</h2>
+
+    <p>
+      Você usa tecnologia de forma consciente?
+    </p>
+
+    <button onclick="window.location.href='quiz.html'">
+      Fazer o Quiz 🚀
+    </button>
+
+  </div>
+
+  <div class="section foto-grupo">
+
+    <h2>📸 Primeira reunião do grupo</h2>
+
+    <img
+      src="grupo.jpeg.jpeg"
+      alt="Grupo reunido durante a primeira reunião do projeto"
+    >
+
+    <p>
+      Primeira reunião do grupo para a realização
+      do projeto Cidadão do Futuro.
+    </p>
+
+  </div>
+
+</div>
+
+<footer>
+  Trabalho Escolar | Educação para a Cidadania
+</footer>
 
 </body>
 </html>
