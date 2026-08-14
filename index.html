@@ -6,6 +6,10 @@
   <title>Cidadão do Futuro</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -27,7 +31,6 @@
       justify-content: center;
     }
 
-    /* LOGO DA ESCOLA */
     .logo-escola {
       position: absolute;
       left: 20px;
@@ -38,7 +41,6 @@
       object-fit: contain;
     }
 
-    /* MENU */
     nav {
       text-align: center;
       padding: 10px;
@@ -56,18 +58,12 @@
       color: #a855f7;
     }
 
-    /* =========================================
-       BANNER PRINCIPAL
-       ========================================= */
-
     .banner {
       min-height: 430px;
       padding: 40px 20px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-align: center;
 
       background-image:
@@ -85,21 +81,14 @@
       overflow: hidden;
     }
 
-    /* Caixa do texto no centro */
     .banner-conteudo {
       position: relative;
       z-index: 2;
-
       max-width: 700px;
-
       padding: 35px 40px;
-
       background: rgba(15, 23, 42, 0.45);
-
       border: 1px solid rgba(168, 85, 247, 0.35);
-
       border-radius: 20px;
-
       backdrop-filter: blur(4px);
 
       box-shadow:
@@ -107,35 +96,23 @@
         0 0 30px rgba(168, 85, 247, 0.15);
     }
 
-    /* Pequena identificação */
     .banner-conteudo::before {
       content: "EDUCAÇÃO  •  TECNOLOGIA  •  FUTURO";
-
       display: inline-block;
-
       padding: 8px 18px;
-
       border-radius: 30px;
-
       border: 1px solid rgba(192, 132, 252, 0.6);
-
       color: #e9d5ff;
-
       font-size: 13px;
       font-weight: bold;
-
       letter-spacing: 1px;
-
       margin-bottom: 15px;
-
       background: rgba(168, 85, 247, 0.10);
     }
 
     .banner h1 {
       font-size: 48px;
-
       margin: 5px 0 15px;
-
       color: white;
 
       text-shadow:
@@ -145,35 +122,23 @@
 
     .banner p {
       font-size: 23px;
-
       color: #f3e8ff;
-
       margin: 10px 0;
     }
 
     .banner-descricao {
       display: block;
-
       margin-top: 20px;
-
       color: #ddd6fe;
-
       font-size: 17px;
-
       line-height: 1.6;
     }
-
-    /* =========================================
-       CONTEÚDO
-       ========================================= */
 
     .container {
       padding: 30px;
       max-width: 1200px;
       margin: auto;
     }
-
-    /* CARDS */
 
     .cards {
       display: flex;
@@ -184,17 +149,11 @@
 
     .card {
       background: #1e293b;
-
       padding: 20px;
-
       border-radius: 12px;
-
       width: 250px;
-
       text-align: center;
-
       transition: 0.3s;
-
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     }
 
@@ -215,8 +174,6 @@
       line-height: 1.5;
     }
 
-    /* SEÇÕES */
-
     .section {
       margin-top: 40px;
     }
@@ -230,44 +187,29 @@
       color: #cbd5e1;
     }
 
-    /* QUIZ */
-
     .quiz {
       text-align: center;
       margin-top: 40px;
-
       background: #1e293b;
-
       padding: 30px;
-
       border-radius: 15px;
     }
 
     button {
       padding: 10px 20px;
-
       background: #a855f7;
-
       border: none;
-
       color: white;
-
       border-radius: 8px;
-
       cursor: pointer;
-
       font-size: 15px;
-
       transition: 0.3s;
     }
 
     button:hover {
       background: #9333ea;
-
       transform: scale(1.03);
     }
-
-    /* FOTO DO GRUPO */
 
     .foto-grupo {
       text-align: center;
@@ -276,11 +218,8 @@
 
     .foto-grupo img {
       width: 80%;
-
       max-width: 850px;
-
       border-radius: 15px;
-
       margin-top: 10px;
 
       box-shadow:
@@ -289,77 +228,54 @@
 
     .foto-grupo p {
       color: #cbd5e1;
-
       font-style: italic;
     }
 
-    /* RODAPÉ */
-
     footer {
       text-align: center;
-
       padding: 20px;
-
       background: #020617;
-
       margin-top: 40px;
-
       color: #cbd5e1;
     }
-
-    /* =========================================
-       CELULAR
-       ========================================= */
 
     @media (max-width: 600px) {
 
       header {
         font-size: 18px;
-
         padding-left: 85px;
         padding-right: 10px;
       }
 
       .logo-escola {
         left: 10px;
-
         width: 55px;
         height: 55px;
       }
 
       nav a {
         display: inline-block;
-
         margin: 6px;
       }
 
-      /* BANNER NO CELULAR */
-
       .banner {
         min-height: 380px;
-
         padding: 30px 15px;
-
-        background-position: center;
       }
 
       .banner-conteudo {
         padding: 25px 20px;
-
         max-width: 90%;
       }
 
       .banner-conteudo::before {
         font-size: 10px;
-
         padding: 7px 12px;
-
         letter-spacing: 0.5px;
       }
 
       .banner h1 {
         font-size: 32px;
-
         line-height: 1.15;
       }
 
@@ -388,10 +304,6 @@
 
 <body>
 
-  <!-- =========================================
-       CABEÇALHO
-       ========================================= -->
-
   <header>
 
     <img
@@ -404,41 +316,23 @@
 
   </header>
 
-
-  <!-- =========================================
-       MENU
-       ========================================= -->
-
   <nav>
 
     <a href="index.html">🏠 Início</a>
-
     <a href="curriculo.html">📄 Currículo</a>
-
     <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
-
     <a href="cursos.html">🎓 Cursos Gratuitos</a>
-
     <a href="ebooks.html">📚 E-books Gratuitos</a>
-
     <a href="enem.html">🎓 ENEM</a>
-
     <a href="quiz.html">🎯 Quiz</a>
 
   </nav>
-
-
-  <!-- =========================================
-       BANNER PRINCIPAL
-       ========================================= -->
 
   <section class="banner">
 
     <div class="banner-conteudo">
 
-      <h1>
-        Cidadãos para o futuro
-      </h1>
+      <h1>Cidadãos para o futuro</h1>
 
       <p>
         Dando um grande passo na sociedade
@@ -453,75 +347,44 @@
 
   </section>
 
-
   <div class="container">
-
-
-    <!-- =========================================
-         CARDS
-         ========================================= -->
 
     <div class="cards">
 
-
       <div class="card">
-
-        <h3>
-          Cursos gratuitos
-        </h3>
+        <h3>Cursos gratuitos</h3>
 
         <p>
           Sites onde você encontrará cursos
           gratuitos com certificado.
         </p>
-
       </div>
 
-
       <div class="card">
-
-        <h3>
-          Primeiro emprego
-        </h3>
+        <h3>Primeiro emprego</h3>
 
         <p>
           Onde devo procurar, o que devo fazer
           na minha primeira entrevista, tudo isso
           respondido em um só lugar.
         </p>
-
       </div>
 
-
       <div class="card">
-
-        <h3>
-          Mostra científica
-        </h3>
+        <h3>Mostra científica</h3>
 
         <p>
           E.E.M. Padre Coriolano
-
           <br><br>
-
           Turma do 2°C
         </p>
-
       </div>
-
 
     </div>
 
-
-    <!-- =========================================
-         TECNOLOGIA NA CIDADANIA
-         ========================================= -->
-
     <div class="section">
 
-      <h2>
-        📍 Tecnologia na Cidadania
-      </h2>
+      <h2>📍 Tecnologia na Cidadania</h2>
 
       <p>
         A tecnologia está presente no nosso dia a dia
@@ -534,16 +397,9 @@
 
     </div>
 
-
-    <!-- =========================================
-         DESAFIOS
-         ========================================= -->
-
     <div class="section">
 
-      <h2>
-        ⚠️ Desafios
-      </h2>
+      <h2>⚠️ Desafios</h2>
 
       <p>
         O uso incorreto da tecnologia pode causar
@@ -553,16 +409,9 @@
 
     </div>
 
-
-    <!-- =========================================
-         SOLUÇÕES
-         ========================================= -->
-
     <div class="section">
 
-      <h2>
-        💡 Soluções
-      </h2>
+      <h2>💡 Soluções</h2>
 
       <p>
         Devemos usar a tecnologia com consciência,
@@ -572,16 +421,9 @@
 
     </div>
 
-
-    <!-- =========================================
-         QUIZ
-         ========================================= -->
-
     <div class="quiz">
 
-      <h2>
-        🎯 Quiz
-      </h2>
+      <h2>🎯 Quiz</h2>
 
       <p>
         Você usa tecnologia de forma consciente?
@@ -593,16 +435,9 @@
 
     </div>
 
-
-    <!-- =========================================
-         FOTO DO GRUPO
-         ========================================= -->
-
     <div class="section foto-grupo">
 
-      <h2>
-        📸 Primeira reunião do grupo
-      </h2>
+      <h2>📸 Primeira reunião do grupo</h2>
 
       <img
         src="grupo.jpeg.jpeg"
@@ -616,20 +451,11 @@
 
     </div>
 
-
   </div>
 
-
-  <!-- =========================================
-       RODAPÉ
-       ========================================= -->
-
   <footer>
-
     Trabalho Escolar | Educação para a Cidadania
-
   </footer>
-
 
 </body>
 </html>
