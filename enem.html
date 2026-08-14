@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENEM - Cidadão do Futuro</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      background: #020617;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #a855f7;
+      position: relative;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-escola {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    nav {
+      text-align: center;
+      padding: 10px;
+      background: #020617;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #a855f7;
+    }
+
+    .banner {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #1e1b4b, #6d28d9);
+    }
+
+    .banner h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    .section {
+      margin-top: 45px;
+    }
+
+    .section h2 {
+      color: #a855f7;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h3 {
+      color: #a855f7;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #a855f7;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .botao:hover {
+      background: #9333ea;
+    }
+
+    .lista {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .lista strong {
+      color: white;
+    }
+
+    .redacao {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    .redacao h3 {
+      color: #a855f7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 40px;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        font-size: 18px;
+        padding-left: 85px;
+        padding-right: 10px;
+      }
+
+      .logo-escola {
+        left: 10px;
+        width: 55px;
+        height: 55px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .banner h1 {
+        font-size: 30px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+
+    <img
+      src="file_00000000e480820e841c368002932697.png"
+      alt="Logo da Escola de Ensino Médio Padre Coriolano"
+      class="logo-escola"
+    >
+
+    🎓 ENEM
+
+  </header>
+
+
+  <!-- MENU -->
+  <nav>
+    <a href="index.html">🏠 Início</a>
+    <a href="curriculo.html">📄 Currículo</a>
+    <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
+    <a href="cursos.html">🎓 Cursos Gratuitos</a>
+    <a href="ebooks.html">📚 E-books Gratuitos</a>
+    <a href="enem.html">🎓 ENEM</a>
+    <a href="quiz.html">🎯 Quiz</a>
+  </nav>
+
+
+  <!-- BANNER -->
+  <section class="banner">
+
+    <h1>🎓 Preparação para o ENEM</h1>
+
+    <p>
+      Organize seus estudos, conheça os conteúdos
+      e encontre materiais gratuitos.
+    </p>
+
+  </section>
+
+
+  <div class="container">
+
+    <p class="intro">
+      O ENEM avalia conhecimentos de diferentes áreas do ensino médio.
+      Use esta página como ponto de partida para organizar sua preparação.
+    </p>
+
+
+    <!-- O QUE CAI -->
+    <div class="section">
+
+      <h2>📚 O que é cobrado no ENEM?</h2>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <h3>📝 Linguagens</h3>
+
+          <p>
+            Língua Portuguesa, Literatura, interpretação de textos,
+            língua estrangeira, Artes, Educação Física e tecnologias.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>🌎 Ciências Humanas</h3>
+
+          <p>
+            História, Geografia, Filosofia e Sociologia,
+            além da interpretação de mapas, gráficos e documentos.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>🧪 Ciências da Natureza</h3>
+
+          <p>
+            Biologia, Química e Física, com questões
+            relacionadas a fenômenos e situações do cotidiano.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>➗ Matemática</h3>
+
+          <p>
+            Matemática e suas tecnologias, incluindo
+            porcentagem, funções, geometria, estatística e probabilidade.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>✍️ Redação</h3>
+
+          <p>
+            Produção de um texto dissertativo-argumentativo
+            de acordo com a proposta apresentada na prova.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONTEUDOS IMPORTANTES -->
+    <div class="section">
+
+      <h2>📌 Conteúdos importantes para revisar</h2>
+
+      <div class="lista">
+
+        <p>
+          <strong>Matemática:</strong>
+          porcentagem, razão e proporção, regra de três,
+          funções, geometria, estatística e probabilidade.
+        </p>
+
+        <p>
+          <strong>Português:</strong>
+          interpretação de texto, gêneros textuais,
+          funções da linguagem, literatura e gramática.
+        </p>
+
+        <p>
+          <strong>História:</strong>
+          Brasil Colônia, Império e República,
+          Era Vargas, Ditadura Militar e história mundial.
+        </p>
+
+        <p>
+          <strong>Geografia:</strong>
+          população, urbanização, globalização,
+          meio ambiente, economia e geopolítica.
+        </p>
+
+        <p>
+          <strong>Biologia:</strong>
+          ecologia, genética, evolução, citologia
+          e fisiologia humana.
+        </p>
+
+        <p>
+          <strong>Química:</strong>
+          estequiometria, química orgânica,
+          soluções, eletroquímica e funções químicas.
+        </p>
+
+        <p>
+          <strong>Física:</strong>
+          mecânica, energia, eletricidade,
+          ondas, óptica e termologia.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- REDAÇÃO -->
+    <div class="section">
+
+      <h2>✍️ Redação</h2>
+
+      <div class="redacao">
+
+        <h3>Como estudar?</h3>
+
+        <p>
+          Pratique a escrita regularmente e aprenda a organizar
+          uma introdução, o desenvolvimento dos argumentos e uma conclusão.
+        </p>
+
+        <p>
+          Também é importante estudar temas atuais e desenvolver
+          repertório sociocultural para utilizar nos textos.
+        </p>
+
+        <a
+          href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/outros-documentos"
+          target="_blank"
+          class="botao"
+        >
+          Ver materiais oficiais do ENEM
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- VIDEOAULAS -->
+    <div class="section">
+
+      <h2>🎥 Videoaulas e canais para estudar</h2>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <h3>➗ Matemática</h3>
+
+          <p>
+            Aulas e revisões de matemática para
+            reforçar os principais conteúdos.
+          </p>
+
+          <a
+            href="https://www.youtube.com/results?search_query=matem%C3%A1tica+ENEM"
+            target="_blank"
+            class="botao"
+          >
+            Assistir aulas
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>📝 Português</h3>
+
+          <p>
+            Revisões de Língua Portuguesa,
+            interpretação e conteúdos importantes.
+          </p>
+
+          <a
+            href="https://www.youtube.com/watch?v=X61lboe5_pM"
+            target="_blank"
+            class="botao"
+          >
+            Ver aula
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>🧪 Ciências da Natureza</h3>
+
+          <p>
+            Encontre aulas de Física, Química
+            e Biologia voltadas para o ENEM.
+          </p>
+
+          <a
+            href="https://www.youtube.com/results?search_query=ci%C3%AAncias+da+natureza+ENEM"
+            target="_blank"
+            class="botao"
+          >
+            Assistir aulas
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>🌎 Humanas</h3>
+
+          <p>
+            Revisões de História, Geografia,
+            Filosofia e Sociologia.
+          </p>
+
+          <a
+            href="https://www.youtube.com/results?search_query=ci%C3%AAncias+humanas+ENEM"
+            target="_blank"
+            class="botao"
+          >
+            Assistir aulas
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>✍️ Redação</h3>
+
+          <p>
+            Aulas e dicas para melhorar a estrutura,
+            argumentação e repertório.
+          </p>
+
+          <a
+            href="https://www.youtube.com/results?search_query=reda%C3%A7%C3%A3o+ENEM"
+            target="_blank"
+            class="botao"
+          >
+            Assistir aulas
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SITE OFICIAL -->
+    <div class="section">
+
+      <h2>🏛️ Fonte oficial</h2>
+
+      <div class="redacao">
+
+        <p>
+          Consulte também o Instituto Nacional de Estudos e Pesquisas
+          Educacionais Anísio Teixeira (Inep), responsável pelo ENEM,
+          para acessar documentos, matrizes e informações oficiais.
+        </p>
+
+        <a
+          href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
+          target="_blank"
+          class="botao"
+        >
+          Acessar o Inep
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- RODAPÉ -->
+  <footer>
+
+    Cidadão do Futuro | Educação para a Cidadania
+
+  </footer>
+
+</body>
+</html>
