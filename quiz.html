@@ -21,6 +21,8 @@
       color: white;
     }
 
+    /* CABEÇALHO */
+
     header {
       background: #020617;
       padding: 12px 20px;
@@ -45,22 +47,43 @@
       object-fit: contain;
     }
 
+    /* MENU */
+
     nav {
-      text-align: center;
-      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 15px;
       background: #020617;
+      border-top: 1px solid #1e293b;
+      border-bottom: 1px solid #1e293b;
     }
 
     nav a {
-      color: white;
-      margin: 8px;
+      color: #e2e8f0;
+      padding: 9px 13px;
+      margin: 0;
       text-decoration: none;
+      border-radius: 8px;
+      font-size: 15px;
       transition: 0.3s;
     }
 
     nav a:hover {
+      background: #1e293b;
       color: #c084fc;
+      transform: translateY(-2px);
     }
+
+    nav a.ativo {
+      background: #7c3aed;
+      color: white;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
+    }
+
+    /* BANNER */
 
     .banner {
       padding: 70px 20px;
@@ -91,14 +114,17 @@
       color: #e9d5ff;
       max-width: 700px;
       margin: auto;
-      line-height: 1.6;
     }
+
+    /* CONTAINER */
 
     .container {
       width: 90%;
       max-width: 900px;
       margin: 40px auto;
     }
+
+    /* INTRODUÇÃO */
 
     .intro {
       background: #1e293b;
@@ -117,6 +143,8 @@
       color: #cbd5e1;
       line-height: 1.6;
     }
+
+    /* PERGUNTAS */
 
     .pergunta {
       background: #1e293b;
@@ -154,6 +182,8 @@
       accent-color: #a855f7;
     }
 
+    /* BOTÃO */
+
     .area-botao {
       text-align: center;
       margin: 35px 0;
@@ -175,6 +205,8 @@
       background: #9333ea;
       transform: translateY(-2px);
     }
+
+    /* RESULTADO */
 
     #resultado {
       display: none;
@@ -236,6 +268,8 @@
       color: white;
     }
 
+    /* RODAPÉ */
+
     footer {
       text-align: center;
       padding: 20px;
@@ -243,6 +277,8 @@
       margin-top: 50px;
       color: #cbd5e1;
     }
+
+    /* CELULAR */
 
     @media (max-width: 600px) {
 
@@ -258,9 +294,14 @@
         height: 55px;
       }
 
+      nav {
+        gap: 4px;
+        padding: 8px;
+      }
+
       nav a {
-        display: inline-block;
-        margin: 6px;
+        font-size: 13px;
+        padding: 8px 9px;
       }
 
       .banner h1 {
@@ -287,533 +328,530 @@
 
 <body>
 
-  <header>
+<header>
 
-    <img
-      src="file_00000000e480820e841c368002932697.png"
-      alt="Logo da Escola de Ensino Médio Padre Coriolano"
-      class="logo-escola"
-    >
+  <img
+    src="file_00000000e480820e841c368002932697.png"
+    alt="Logo da Escola de Ensino Médio Padre Coriolano"
+    class="logo-escola"
+  >
 
-    🤖 Cidadão do Futuro
+  🤖 Cidadão do Futuro
 
-  </header>
+</header>
 
-  <nav>
+<nav>
+  <a href="index.html">🏠 Início</a>
+  <a href="curriculo.html">📄 Currículo</a>
+  <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
+  <a href="cursos.html">🎓 Cursos Gratuitos</a>
+  <a href="ebooks.html">📚 E-books Gratuitos</a>
+  <a href="enem.html">🎓 ENEM</a>
+  <a href="quiz.html" class="ativo">🎯 Quiz</a>
+</nav>
 
-    <a href="index.html">🏠 Início</a>
-    <a href="curriculo.html">📄 Currículo</a>
-    <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
-    <a href="cursos.html">🎓 Cursos Gratuitos</a>
-    <a href="ebooks.html">📚 E-books Gratuitos</a>
-    <a href="enem.html">🎓 ENEM</a>
-    <a href="quiz.html">🎯 Quiz</a>
+<section class="banner">
 
-  </nav>
+  <h1>🧭 Qual é a sua profissão ideal?</h1>
 
-  <section class="banner">
+  <p>
+    Responda algumas perguntas sobre seus interesses,
+    habilidades e preferências e descubra quais áreas
+    profissionais podem combinar com você.
+  </p>
 
-    <h1>🧭 Qual é a sua profissão ideal?</h1>
+</section>
+
+<main class="container">
+
+  <div class="intro">
+
+    <h2>🚀 Descubra seu perfil profissional</h2>
 
     <p>
-      Responda algumas perguntas sobre seus interesses,
-      habilidades e preferências e descubra quais áreas
-      profissionais podem combinar com você.
+      Não existe uma profissão perfeita para todo mundo.
+      Cada pessoa possui interesses, habilidades e objetivos
+      diferentes.
     </p>
 
-  </section>
+    <p>
+      Responda pensando no que você realmente gosta.
+      No final, o quiz mostrará uma área profissional
+      que combina com suas respostas.
+    </p>
 
-  <main class="container">
+  </div>
 
-    <div class="intro">
+  <div class="pergunta">
 
-      <h2>🚀 Descubra seu perfil profissional</h2>
+    <h3>1️⃣ O que você mais gosta de fazer?</h3>
 
-      <p>
-        Não existe uma profissão perfeita para todo mundo.
-        Cada pessoa possui interesses, habilidades e objetivos
-        diferentes.
-      </p>
+    <label class="opcao">
+      <input type="radio" name="q1" value="tecnologia">
+      💻 Mexer com computadores e tecnologia
+    </label>
 
-      <p>
-        Responda pensando no que você realmente gosta.
-        No final, o quiz mostrará uma área profissional
-        que combina com suas respostas.
-      </p>
+    <label class="opcao">
+      <input type="radio" name="q1" value="saude">
+      🩺 Ajudar e cuidar das pessoas
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q1" value="criatividade">
+      🎨 Criar, desenhar ou produzir coisas
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q1" value="negocios">
+      💼 Organizar, vender ou administrar
+    </label>
 
-      <h3>1️⃣ O que você mais gosta de fazer?</h3>
+    <label class="opcao">
+      <input type="radio" name="q1" value="educacao">
+      📚 Ensinar e explicar coisas
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q1" value="tecnologia">
-        💻 Mexer com computadores e tecnologia
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q1" value="saude">
-        🩺 Ajudar e cuidar das pessoas
-      </label>
+  <div class="pergunta">
 
-      <label class="opcao">
-        <input type="radio" name="q1" value="criatividade">
-        🎨 Criar, desenhar ou produzir coisas
-      </label>
+    <h3>2️⃣ Em um trabalho em grupo, qual função você prefere?</h3>
 
-      <label class="opcao">
-        <input type="radio" name="q1" value="negocios">
-        💼 Organizar, vender ou administrar
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q2" value="tecnologia">
+      💻 Resolver problemas usando tecnologia
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q1" value="educacao">
-        📚 Ensinar e explicar coisas
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q2" value="saude">
+      🤝 Ajudar os colegas
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q2" value="criatividade">
+      🎨 Criar ideias diferentes
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q2" value="negocios">
+      📋 Organizar o trabalho
+    </label>
 
-      <h3>2️⃣ Em um trabalho em grupo, qual função você prefere?</h3>
+    <label class="opcao">
+      <input type="radio" name="q2" value="educacao">
+      🗣️ Explicar o assunto para o grupo
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q2" value="tecnologia">
-        💻 Resolver problemas usando tecnologia
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q2" value="saude">
-        🤝 Ajudar os colegas
-      </label>
+  <div class="pergunta">
 
-      <label class="opcao">
-        <input type="radio" name="q2" value="criatividade">
-        🎨 Criar ideias diferentes
-      </label>
+    <h3>3️⃣ Qual dessas matérias você prefere?</h3>
 
-      <label class="opcao">
-        <input type="radio" name="q2" value="negocios">
-        📋 Organizar o trabalho
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q3" value="tecnologia">
+      🧮 Matemática e tecnologia
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q2" value="educacao">
-        🗣️ Explicar o assunto para o grupo
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q3" value="saude">
+      🧬 Biologia e Ciências
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q3" value="criatividade">
+      🎭 Artes e literatura
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q3" value="negocios">
+      📊 Matemática e administração
+    </label>
 
-      <h3>3️⃣ Qual dessas matérias você prefere?</h3>
+    <label class="opcao">
+      <input type="radio" name="q3" value="educacao">
+      📖 História e Língua Portuguesa
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q3" value="tecnologia">
-        🧮 Matemática e tecnologia
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q3" value="saude">
-        🧬 Biologia e Ciências
-      </label>
+  <div class="pergunta">
 
-      <label class="opcao">
-        <input type="radio" name="q3" value="criatividade">
-        🎭 Artes e literatura
-      </label>
+    <h3>4️⃣ Qual ambiente de trabalho parece mais interessante?</h3>
 
-      <label class="opcao">
-        <input type="radio" name="q3" value="negocios">
-        📊 Matemática e administração
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q4" value="tecnologia">
+      🖥️ Escritório ou empresa de tecnologia
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q3" value="educacao">
-        📖 História e Língua Portuguesa
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q4" value="saude">
+      🏥 Hospital, clínica ou laboratório
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q4" value="criatividade">
+      🎬 Estúdio, agência ou ambiente artístico
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q4" value="negocios">
+      🏢 Empresa ou ambiente empresarial
+    </label>
 
-      <h3>4️⃣ Qual ambiente de trabalho parece mais interessante?</h3>
+    <label class="opcao">
+      <input type="radio" name="q4" value="educacao">
+      🏫 Escola ou instituição de ensino
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q4" value="tecnologia">
-        🖥️ Escritório ou empresa de tecnologia
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q4" value="saude">
-        🏥 Hospital, clínica ou laboratório
-      </label>
+  <div class="pergunta">
 
-      <label class="opcao">
-        <input type="radio" name="q4" value="criatividade">
-        🎬 Estúdio, agência ou ambiente artístico
-      </label>
+    <h3>5️⃣ Qual dessas atividades você faria com mais interesse?</h3>
 
-      <label class="opcao">
-        <input type="radio" name="q4" value="negocios">
-        🏢 Empresa ou ambiente empresarial
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q5" value="tecnologia">
+      🤖 Criar um aplicativo ou site
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q4" value="educacao">
-        🏫 Escola ou instituição de ensino
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q5" value="saude">
+      🧑‍⚕️ Aprender sobre o corpo humano
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q5" value="criatividade">
+      📸 Criar vídeos, imagens ou músicas
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q5" value="negocios">
+      💰 Criar uma empresa ou negócio
+    </label>
 
-      <h3>5️⃣ Qual dessas atividades você faria com mais interesse?</h3>
+    <label class="opcao">
+      <input type="radio" name="q5" value="educacao">
+      👨‍🏫 Ensinar alguém a aprender algo novo
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q5" value="tecnologia">
-        🤖 Criar um aplicativo ou site
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q5" value="saude">
-        🧑‍⚕️ Aprender sobre o corpo humano
-      </label>
+  <div class="pergunta">
 
-      <label class="opcao">
-        <input type="radio" name="q5" value="criatividade">
-        📸 Criar vídeos, imagens ou músicas
-      </label>
+    <h3>6️⃣ Qual característica combina mais com você?</h3>
 
-      <label class="opcao">
-        <input type="radio" name="q5" value="negocios">
-        💰 Criar uma empresa ou negócio
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q6" value="tecnologia">
+      🧠 Gosto de resolver problemas
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q5" value="educacao">
-        👨‍🏫 Ensinar alguém a aprender algo novo
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q6" value="saude">
+      ❤️ Sou cuidadoso e gosto de ajudar
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q6" value="criatividade">
+      ✨ Sou criativo e tenho muitas ideias
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q6" value="negocios">
+      📈 Gosto de liderar e organizar
+    </label>
 
-      <h3>6️⃣ Qual característica combina mais com você?</h3>
+    <label class="opcao">
+      <input type="radio" name="q6" value="educacao">
+      🗣️ Gosto de conversar e explicar
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q6" value="tecnologia">
-        🧠 Gosto de resolver problemas
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q6" value="saude">
-        ❤️ Sou cuidadoso e gosto de ajudar
-      </label>
+  <div class="pergunta">
 
-      <label class="opcao">
-        <input type="radio" name="q6" value="criatividade">
-        ✨ Sou criativo e tenho muitas ideias
-      </label>
+    <h3>7️⃣ O que mais te motiva em uma profissão?</h3>
 
-      <label class="opcao">
-        <input type="radio" name="q6" value="negocios">
-        📈 Gosto de liderar e organizar
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q7" value="tecnologia">
+      🚀 Criar coisas novas
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q6" value="educacao">
-        🗣️ Gosto de conversar e explicar
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q7" value="saude">
+      ❤️ Fazer diferença na vida das pessoas
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q7" value="criatividade">
+      🎨 Poder usar minha criatividade
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q7" value="negocios">
+      💰 Crescer profissionalmente
+    </label>
 
-      <h3>7️⃣ O que mais te motiva em uma profissão?</h3>
+    <label class="opcao">
+      <input type="radio" name="q7" value="educacao">
+      📚 Compartilhar conhecimento
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q7" value="tecnologia">
-        🚀 Criar coisas novas
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q7" value="saude">
-        ❤️ Fazer diferença na vida das pessoas
-      </label>
+  <div class="pergunta">
 
-      <label class="opcao">
-        <input type="radio" name="q7" value="criatividade">
-        🎨 Poder usar minha criatividade
-      </label>
+    <h3>8️⃣ Qual dessas profissões mais chama sua atenção?</h3>
 
-      <label class="opcao">
-        <input type="radio" name="q7" value="negocios">
-        💰 Crescer profissionalmente
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q8" value="tecnologia">
+      👨‍💻 Programador
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q7" value="educacao">
-        📚 Compartilhar conhecimento
-      </label>
+    <label class="opcao">
+      <input type="radio" name="q8" value="saude">
+      👩‍⚕️ Médico ou enfermeiro
+    </label>
 
-    </div>
+    <label class="opcao">
+      <input type="radio" name="q8" value="criatividade">
+      🎨 Designer
+    </label>
 
-    <div class="pergunta">
+    <label class="opcao">
+      <input type="radio" name="q8" value="negocios">
+      👔 Administrador ou empresário
+    </label>
 
-      <h3>8️⃣ Qual dessas profissões mais chama sua atenção?</h3>
+    <label class="opcao">
+      <input type="radio" name="q8" value="educacao">
+      👨‍🏫 Professor
+    </label>
 
-      <label class="opcao">
-        <input type="radio" name="q8" value="tecnologia">
-        👨‍💻 Programador
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q8" value="saude">
-        👩‍⚕️ Médico ou enfermeiro
-      </label>
+  <div class="area-botao">
 
-      <label class="opcao">
-        <input type="radio" name="q8" value="criatividade">
-        🎨 Designer
-      </label>
+    <button onclick="calcularResultado()">
+      🔎 Descobrir minha profissão
+    </button>
 
-      <label class="opcao">
-        <input type="radio" name="q8" value="negocios">
-        👔 Administrador ou empresário
-      </label>
+  </div>
 
-      <label class="opcao">
-        <input type="radio" name="q8" value="educacao">
-        👨‍🏫 Professor
-      </label>
+  <div id="resultado"></div>
 
-    </div>
+</main>
 
-    <div class="area-botao">
+<footer>
+  Cidadão do Futuro | Educação para a Cidadania
+</footer>
 
-      <button onclick="calcularResultado()">
-        🔎 Descobrir minha profissão
-      </button>
+<script>
 
-    </div>
+function calcularResultado() {
 
-    <div id="resultado"></div>
+  const perguntas = 8;
 
-  </main>
+  let pontos = {
+    tecnologia: 0,
+    saude: 0,
+    criatividade: 0,
+    negocios: 0,
+    educacao: 0
+  };
 
-  <footer>
+  let respondeuTudo = true;
 
-    Cidadão do Futuro | Educação para a Cidadania
+  for (let i = 1; i <= perguntas; i++) {
 
-  </footer>
+    const resposta = document.querySelector(
+      'input[name="q' + i + '"]:checked'
+    );
 
-  <script>
-
-    function calcularResultado() {
-
-      const perguntas = 8;
-
-      let pontos = {
-        tecnologia: 0,
-        saude: 0,
-        criatividade: 0,
-        negocios: 0,
-        educacao: 0
-      };
-
-      let respondeuTudo = true;
-
-      for (let i = 1; i <= perguntas; i++) {
-
-        const resposta = document.querySelector(
-          'input[name="q' + i + '"]:checked'
-        );
-
-        if (!resposta) {
-          respondeuTudo = false;
-        } else {
-          pontos[resposta.value]++;
-        }
-
-      }
-
-      if (!respondeuTudo) {
-
-        alert(
-          "⚠️ Responda todas as perguntas antes de descobrir seu resultado!"
-        );
-
-        return;
-      }
-
-      let maior = Math.max(
-        pontos.tecnologia,
-        pontos.saude,
-        pontos.criatividade,
-        pontos.negocios,
-        pontos.educacao
-      );
-
-      let perfil = "";
-
-      if (pontos.tecnologia === maior) {
-
-        perfil = `
-          <h2>💻 Seu perfil é: Tecnologia</h2>
-
-          <p>
-            Você demonstra gostar de resolver problemas,
-            utilizar tecnologia e criar soluções.
-            Áreas relacionadas à tecnologia podem combinar
-            bastante com seus interesses.
-          </p>
-
-          <h3>🚀 Profissões para conhecer:</h3>
-
-          <div class="profissoes">
-
-            <div class="profissao">👨‍💻 Programador</div>
-            <div class="profissao">🖥️ Analista de Sistemas</div>
-            <div class="profissao">🤖 Desenvolvedor de IA</div>
-            <div class="profissao">🌐 Desenvolvedor Web</div>
-            <div class="profissao">🔐 Segurança da Informação</div>
-
-          </div>
-        `;
-
-      }
-
-      else if (pontos.saude === maior) {
-
-        perfil = `
-          <h2>🩺 Seu perfil é: Saúde</h2>
-
-          <p>
-            Você demonstra interesse em cuidar das pessoas,
-            ajudar os outros e entender o funcionamento
-            do corpo e da saúde.
-          </p>
-
-          <h3>🚀 Profissões para conhecer:</h3>
-
-          <div class="profissoes">
-
-            <div class="profissao">👨‍⚕️ Médico</div>
-            <div class="profissao">👩‍⚕️ Enfermeiro</div>
-            <div class="profissao">🧪 Biomédico</div>
-            <div class="profissao">🧠 Psicólogo</div>
-            <div class="profissao">💊 Farmacêutico</div>
-
-          </div>
-        `;
-
-      }
-
-      else if (pontos.criatividade === maior) {
-
-        perfil = `
-          <h2>🎨 Seu perfil é: Criatividade</h2>
-
-          <p>
-            Você parece gostar de criar, imaginar novas ideias
-            e se expressar. Profissões criativas podem ser
-            interessantes para você.
-          </p>
-
-          <h3>🚀 Profissões para conhecer:</h3>
-
-          <div class="profissoes">
-
-            <div class="profissao">🎨 Designer</div>
-            <div class="profissao">📸 Fotógrafo</div>
-            <div class="profissao">🎬 Produtor Audiovisual</div>
-            <div class="profissao">✏️ Publicitário</div>
-            <div class="profissao">🎮 Desenvolvedor de Jogos</div>
-
-          </div>
-        `;
-
-      }
-
-      else if (pontos.negocios === maior) {
-
-        perfil = `
-          <h2>💼 Seu perfil é: Negócios</h2>
-
-          <p>
-            Você demonstra interesse por organização,
-            liderança, administração e empreendedorismo.
-          </p>
-
-          <h3>🚀 Profissões para conhecer:</h3>
-
-          <div class="profissoes">
-
-            <div class="profissao">👔 Administrador</div>
-            <div class="profissao">💰 Contador</div>
-            <div class="profissao">📊 Analista Financeiro</div>
-            <div class="profissao">🚀 Empreendedor</div>
-            <div class="profissao">📈 Gestor</div>
-
-          </div>
-        `;
-
-      }
-
-      else {
-
-        perfil = `
-          <h2>📚 Seu perfil é: Educação</h2>
-
-          <p>
-            Você demonstra gostar de aprender, ensinar,
-            conversar e compartilhar conhecimento.
-            A área da educação pode combinar com você.
-          </p>
-
-          <h3>🚀 Profissões para conhecer:</h3>
-
-          <div class="profissoes">
-
-            <div class="profissao">👨‍🏫 Professor</div>
-            <div class="profissao">📚 Pedagogo</div>
-            <div class="profissao">🧠 Psicopedagogo</div>
-            <div class="profissao">🎓 Coordenador Educacional</div>
-            <div class="profissao">🗣️ Instrutor</div>
-
-          </div>
-        `;
-
-      }
-
-      const resultado = document.getElementById("resultado");
-
-      resultado.innerHTML = perfil + `
-
-        <p class="aviso">
-          ⚠️ Este quiz é apenas uma ferramenta de orientação.
-          O resultado não determina qual profissão você deve seguir.
-          Pesquise sobre as profissões, converse com profissionais
-          e conheça diferentes áreas antes de tomar uma decisão.
-        </p>
-
-        <a class="voltar" href="index.html">
-          ← Voltar para o início
-        </a>
-
-      `;
-
-      resultado.style.display = "block";
-
-      resultado.scrollIntoView({
-        behavior: "smooth"
-      });
-
+    if (!resposta) {
+      respondeuTudo = false;
+    } else {
+      pontos[resposta.value]++;
     }
 
-  </script>
+  }
+
+  if (!respondeuTudo) {
+
+    alert(
+      "⚠️ Responda todas as perguntas antes de descobrir seu resultado!"
+    );
+
+    return;
+
+  }
+
+  let maior = Math.max(
+    pontos.tecnologia,
+    pontos.saude,
+    pontos.criatividade,
+    pontos.negocios,
+    pontos.educacao
+  );
+
+  let perfil = "";
+
+  if (pontos.tecnologia === maior) {
+
+    perfil = `
+      <h2>💻 Seu perfil é: Tecnologia</h2>
+
+      <p>
+        Você demonstra gostar de resolver problemas,
+        utilizar tecnologia e criar soluções.
+        Áreas relacionadas à tecnologia podem combinar
+        bastante com seus interesses.
+      </p>
+
+      <h3>🚀 Profissões para conhecer:</h3>
+
+      <div class="profissoes">
+
+        <div class="profissao">👨‍💻 Programador</div>
+        <div class="profissao">🖥️ Analista de Sistemas</div>
+        <div class="profissao">🤖 Desenvolvedor de IA</div>
+        <div class="profissao">🌐 Desenvolvedor Web</div>
+        <div class="profissao">🔐 Segurança da Informação</div>
+
+      </div>
+    `;
+
+  }
+
+  else if (pontos.saude === maior) {
+
+    perfil = `
+      <h2>🩺 Seu perfil é: Saúde</h2>
+
+      <p>
+        Você demonstra interesse em cuidar das pessoas,
+        ajudar os outros e entender o funcionamento
+        do corpo e da saúde.
+      </p>
+
+      <h3>🚀 Profissões para conhecer:</h3>
+
+      <div class="profissoes">
+
+        <div class="profissao">👨‍⚕️ Médico</div>
+        <div class="profissao">👩‍⚕️ Enfermeiro</div>
+        <div class="profissao">🧪 Biomédico</div>
+        <div class="profissao">🧠 Psicólogo</div>
+        <div class="profissao">💊 Farmacêutico</div>
+
+      </div>
+    `;
+
+  }
+
+  else if (pontos.criatividade === maior) {
+
+    perfil = `
+      <h2>🎨 Seu perfil é: Criatividade</h2>
+
+      <p>
+        Você parece gostar de criar, imaginar novas ideias
+        e se expressar. Profissões criativas podem ser
+        interessantes para você.
+      </p>
+
+      <h3>🚀 Profissões para conhecer:</h3>
+
+      <div class="profissoes">
+
+        <div class="profissao">🎨 Designer</div>
+        <div class="profissao">📸 Fotógrafo</div>
+        <div class="profissao">🎬 Produtor Audiovisual</div>
+        <div class="profissao">✏️ Publicitário</div>
+        <div class="profissao">🎮 Desenvolvedor de Jogos</div>
+
+      </div>
+    `;
+
+  }
+
+  else if (pontos.negocios === maior) {
+
+    perfil = `
+      <h2>💼 Seu perfil é: Negócios</h2>
+
+      <p>
+        Você demonstra interesse por organização,
+        liderança, administração e empreendedorismo.
+      </p>
+
+      <h3>🚀 Profissões para conhecer:</h3>
+
+      <div class="profissoes">
+
+        <div class="profissao">👔 Administrador</div>
+        <div class="profissao">💰 Contador</div>
+        <div class="profissao">📊 Analista Financeiro</div>
+        <div class="profissao">🚀 Empreendedor</div>
+        <div class="profissao">📈 Gestor</div>
+
+      </div>
+    `;
+
+  }
+
+  else {
+
+    perfil = `
+      <h2>📚 Seu perfil é: Educação</h2>
+
+      <p>
+        Você demonstra gostar de aprender, ensinar,
+        conversar e compartilhar conhecimento.
+        A área da educação pode combinar com você.
+      </p>
+
+      <h3>🚀 Profissões para conhecer:</h3>
+
+      <div class="profissoes">
+
+        <div class="profissao">👨‍🏫 Professor</div>
+        <div class="profissao">📚 Pedagogo</div>
+        <div class="profissao">🧠 Psicopedagogo</div>
+        <div class="profissao">🎓 Coordenador Educacional</div>
+        <div class="profissao">🗣️ Instrutor</div>
+
+      </div>
+    `;
+
+  }
+
+  const resultado = document.getElementById("resultado");
+
+  resultado.innerHTML = perfil + `
+
+    <p class="aviso">
+      ⚠️ Este quiz é apenas uma ferramenta de orientação.
+      O resultado não determina qual profissão você deve seguir.
+      Pesquise sobre as profissões, converse com profissionais
+      e conheça diferentes áreas antes de tomar uma decisão.
+    </p>
+
+    <a class="voltar" href="index.html">
+      ← Voltar para o início
+    </a>
+
+  `;
+
+  resultado.style.display = "block";
+
+  resultado.scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+</script>
 
 </body>
 </html>
