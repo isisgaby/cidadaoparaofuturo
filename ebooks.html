@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-books Gratuitos - Cidadão do Futuro</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      background: #020617;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #a855f7;
+      position: relative;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-escola {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    nav {
+      text-align: center;
+      padding: 10px;
+      background: #020617;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #a855f7;
+    }
+
+    .banner {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #1e1b4b, #6d28d9);
+    }
+
+    .banner h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      color: #a855f7;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #a855f7;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .botao:hover {
+      background: #9333ea;
+    }
+
+    .section {
+      margin-top: 50px;
+    }
+
+    .section h2 {
+      color: #a855f7;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .dica {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 40px;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        font-size: 18px;
+        padding-left: 85px;
+        padding-right: 10px;
+      }
+
+      .logo-escola {
+        left: 10px;
+        width: 55px;
+        height: 55px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .banner h1 {
+        font-size: 30px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+
+    <img
+      src="file_00000000e480820e841c368002932697.png"
+      alt="Logo da Escola de Ensino Médio Padre Coriolano"
+      class="logo-escola"
+    >
+
+    📚 E-books Gratuitos
+
+  </header>
+
+
+  <!-- MENU -->
+  <nav>
+    <a href="index.html">🏠 Início</a>
+    <a href="curriculo.html">📄 Currículo</a>
+    <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
+    <a href="cursos.html">🎓 Cursos Gratuitos</a>
+    <a href="ebooks.html">📚 E-books Gratuitos</a>
+    <a href="enem.html">🎓 ENEM</a>
+    <a href="quiz.html">🎯 Quiz</a>
+  </nav>
+
+
+  <!-- BANNER -->
+  <section class="banner">
+
+    <h1>📚 E-books Gratuitos</h1>
+
+    <p>
+      Encontre livros, clássicos da literatura e materiais
+      gratuitos para estudar e aprender.
+    </p>
+
+  </section>
+
+
+  <div class="container">
+
+    <p class="intro">
+      A leitura pode ajudar nos estudos, aumentar o conhecimento
+      e também melhorar a preparação para provas como o ENEM.
+    </p>
+
+
+    <!-- SITES -->
+    <div class="cards">
+
+      <div class="card">
+
+        <h2>📖 MEC Livros</h2>
+
+        <p>
+          Biblioteca digital do Ministério da Educação com
+          obras disponíveis gratuitamente para leitura.
+        </p>
+
+        <a
+          href="https://meclivros.mec.gov.br/"
+          target="_blank"
+          class="botao"
+        >
+          Acessar
+        </a>
+
+      </div>
+
+
+      <div class="card">
+
+        <h2>🏛️ Domínio Público</h2>
+
+        <p>
+          Plataforma do governo com obras literárias,
+          científicas e artísticas disponíveis gratuitamente.
+        </p>
+
+        <a
+          href="https://dominiopublico.mec.gov.br/"
+          target="_blank"
+          class="botao"
+        >
+          Acessar
+        </a>
+
+      </div>
+
+
+      <div class="card">
+
+        <h2>🌎 Project Gutenberg</h2>
+
+        <p>
+          Grande coleção de livros digitais gratuitos,
+          principalmente obras em domínio público.
+        </p>
+
+        <a
+          href="https://www.gutenberg.org/"
+          target="_blank"
+          class="botao"
+        >
+          Acessar
+        </a>
+
+      </div>
+
+
+      <div class="card">
+
+        <h2>🏛️ Biblioteca Digital</h2>
+
+        <p>
+          Acervo digital do governo com documentos,
+          livros e materiais para pesquisa.
+        </p>
+
+        <a
+          href="https://www.gov.br/gestao/pt-br/assuntos/biblioteca/biblioteca-digital"
+          target="_blank"
+          class="botao"
+        >
+          Acessar
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DICA -->
+    <div class="section">
+
+      <h2>💡 Dica para os estudantes</h2>
+
+      <div class="dica">
+
+        <p>
+          Antes de baixar um livro em qualquer site, verifique
+          se ele está sendo disponibilizado legalmente.
+        </p>
+
+        <p>
+          Os portais acima são boas opções para encontrar
+          materiais gratuitos e obras em domínio público.
+        </p>
+
+        <p>
+          Para quem está estudando para o ENEM, livros de
+          literatura brasileira também podem ajudar a ampliar
+          o vocabulário e o conhecimento cultural.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- RODAPÉ -->
+  <footer>
+
+    Cidadão do Futuro | Educação para a Cidadania
+
+  </footer>
+
+</body>
+</html>
