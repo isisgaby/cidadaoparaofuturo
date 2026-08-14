@@ -2,12 +2,17 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Primeiro Emprego - Cidadão do Futuro</title>
 
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -18,23 +23,39 @@
 
     header {
       background: #020617;
-      padding: 15px;
+      padding: 12px 20px;
       text-align: center;
       font-size: 22px;
       font-weight: bold;
       color: #a855f7;
+      position: relative;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-escola {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
     }
 
     nav {
       text-align: center;
-      padding: 15px;
+      padding: 12px 10px;
       background: #020617;
     }
 
     nav a {
       color: white;
-      margin: 10px;
+      margin: 8px;
       text-decoration: none;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -42,43 +63,107 @@
     }
 
     .banner {
-      padding: 50px 20px;
+      min-height: 400px;
+      padding: 40px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       text-align: center;
-      background: linear-gradient(to right, #1e1b4b, #6d28d9);
+
+      background-image:
+        linear-gradient(
+          rgba(15, 23, 42, 0.30),
+          rgba(30, 27, 75, 0.35)
+        ),
+        url("fundo-tecnologia.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .banner-conteudo {
+      max-width: 750px;
+      padding: 35px;
+
+      background: rgba(15, 23, 42, 0.55);
+
+      border: 1px solid rgba(192, 132, 252, 0.4);
+
+      border-radius: 20px;
+
+      backdrop-filter: blur(5px);
+
+      box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    }
+
+    .banner small {
+      color: #e9d5ff;
+      letter-spacing: 2px;
+      font-weight: bold;
     }
 
     .banner h1 {
-      font-size: 38px;
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    .banner p {
+      color: #ddd6fe;
+      font-size: 18px;
     }
 
     .container {
-      padding: 30px;
-      max-width: 900px;
+      padding: 35px 20px;
+      max-width: 950px;
       margin: auto;
     }
 
     .card {
       background: #1e293b;
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 15px;
       margin-bottom: 20px;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.25);
     }
 
     .card h2 {
       color: #c084fc;
     }
 
+    .card p,
+    .card li {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
     .passo {
       margin: 15px 0;
-      padding: 15px;
+      padding: 18px;
       background: #334155;
-      border-radius: 8px;
+      border-radius: 10px;
+    }
+
+    .passo strong {
+      color: #e9d5ff;
     }
 
     .dica {
-      background: #312e81;
-      padding: 20px;
-      border-radius: 10px;
+      background: linear-gradient(135deg, #312e81, #4c1d95);
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .dica h2 {
+      color: #e9d5ff;
+    }
+
+    .dica p {
+      color: #ddd6fe;
+      line-height: 1.6;
     }
 
     footer {
@@ -86,34 +171,92 @@
       padding: 20px;
       background: #020617;
       margin-top: 40px;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        font-size: 18px;
+        padding-left: 85px;
+      }
+
+      .logo-escola {
+        left: 10px;
+        width: 55px;
+        height: 55px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .banner {
+        min-height: 360px;
+      }
+
+      .banner-conteudo {
+        padding: 25px 18px;
+      }
+
+      .banner h1 {
+        font-size: 30px;
+      }
+
+      .container {
+        padding: 25px 15px;
+      }
     }
 
   </style>
+
 </head>
 
 <body>
 
 <header>
+
+  <img
+    src="file_00000000e480820e841c368002932697.png"
+    alt="Logo da Escola de Ensino Médio Padre Coriolano"
+    class="logo-escola"
+  >
+
   🤖 Cidadão do Futuro
+
 </header>
 
+
 <nav>
+
   <a href="index.html">🏠 Início</a>
   <a href="curriculo.html">📄 Currículo</a>
   <a href="primeiro-emprego.html">💼 Primeiro Emprego</a>
   <a href="cursos.html">🎓 Cursos Gratuitos</a>
+  <a href="ebooks.html">📚 E-books Gratuitos</a>
+  <a href="enem.html">🎓 ENEM</a>
   <a href="quiz.html">🎯 Quiz</a>
+
 </nav>
+
 
 <section class="banner">
 
-  <h1>💼 Primeiro Emprego</h1>
+  <div class="banner-conteudo">
 
-  <p>
-    Dicas para começar sua vida profissional.
-  </p>
+    <small>PREPARE-SE PARA O MERCADO</small>
+
+    <h1>💼 Primeiro Emprego</h1>
+
+    <p>
+      Dicas para começar sua vida profissional.
+    </p>
+
+  </div>
 
 </section>
+
 
 <div class="container">
 
@@ -129,43 +272,60 @@
 
   </div>
 
+
   <div class="card">
 
     <h2>📋 Passo a passo</h2>
 
     <div class="passo">
+
       <strong>1️⃣ Prepare seu currículo</strong>
+
       <p>
         Organize suas informações, formação escolar,
         cursos e habilidades.
       </p>
+
     </div>
 
+
     <div class="passo">
+
       <strong>2️⃣ Faça cursos</strong>
+
       <p>
         Aprenda novas habilidades e aumente suas
         possibilidades profissionais.
       </p>
+
     </div>
 
+
     <div class="passo">
+
       <strong>3️⃣ Procure oportunidades</strong>
+
       <p>
         Pesquise vagas de estágio, jovem aprendiz
         e primeiro emprego.
       </p>
+
     </div>
 
+
     <div class="passo">
+
       <strong>4️⃣ Prepare-se para entrevistas</strong>
+
       <p>
         Seja educado, pontual e demonstre interesse
         pela oportunidade.
       </p>
+
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -174,20 +334,16 @@
     <ul>
 
       <li>Comunicação</li>
-
       <li>Responsabilidade</li>
-
       <li>Organização</li>
-
       <li>Trabalho em equipe</li>
-
       <li>Conhecimentos de informática</li>
-
       <li>Vontade de aprender</li>
 
     </ul>
 
   </div>
+
 
   <div class="dica">
 
@@ -203,10 +359,10 @@
 
 </div>
 
+
 <footer>
-  Trabalho Escolar | Educação para a Cidadania
+  Cidadão do Futuro | Educação para a Cidadania
 </footer>
 
 </body>
 </html>
-```
