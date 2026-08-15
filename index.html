@@ -315,7 +315,26 @@
     /* =========================
        CELULAR
     ========================= */
+.participantes {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
 
+.participantes li {
+  color: #cbd5e1;
+  padding: 6px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.participantes li:last-child {
+  border-bottom: none;
+}
+
+.card h4 {
+  color: #c084fc;
+  margin: 15px 0 8px;
+}
     @media (max-width: 600px) {
 
       header {
@@ -480,23 +499,26 @@
     </div>
 
 
-    <div class="card">
+  <div class="card">
+  <h3>🔬 Mostra Científica</h3>
 
-      <h3>🔬 Mostra científica</h3>
+  <p>
+    <strong>E.E.M. Padre Coriolano</strong><br>
+    Turma do 2º C
+  </p>
 
-      <p>
-        E.E.M. Padre Coriolano
-        Ana Francisca
-        Amanda Chrisley
-        Isis Gabrielly
-        Isabelle Costa
-        Maria Clara
-        Maria Eduarda Macena
-        
-      </p>
+  <h4>👥 Participantes</h4>
 
-    </div>
-
+  <ul class="participantes">
+    <li>Ana Francisca</li>
+    <li>Amanda Chrisley</li>
+    <li>Isis Gabrielly</li>
+    <li>Isabelle Costa</li>
+    <li>Maria Clara</li>
+    <li>Maria Eduarda Macena</li>
+  </ul>
+</div>
+    
   </div>
 
 
