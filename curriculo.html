@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -50,7 +51,7 @@
     }
 
     /* =========================
-       MENU PROFISSIONAL
+       MENU
     ========================= */
 
     nav {
@@ -161,7 +162,7 @@
 
     .container {
       padding: 35px 20px;
-      max-width: 950px;
+      max-width: 1100px;
       margin: auto;
     }
 
@@ -211,6 +212,282 @@
     }
 
     /* =========================
+       GERADOR DE CURRÍCULO
+    ========================= */
+
+    .gerador {
+      background: #111827;
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 35px;
+
+      border: 1px solid rgba(168, 85, 247, 0.3);
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .gerador-titulo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gerador-titulo h2 {
+      color: #c084fc;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .gerador-titulo p {
+      color: #cbd5e1;
+    }
+
+    .secao-formulario {
+      margin-bottom: 30px;
+      padding: 22px;
+
+      background: #1e293b;
+
+      border-radius: 15px;
+
+      border: 1px solid rgba(168, 85, 247, 0.15);
+    }
+
+    .secao-formulario h3 {
+      color: #c084fc;
+      margin-top: 0;
+      border-bottom: 1px solid rgba(192,132,252,0.2);
+      padding-bottom: 10px;
+    }
+
+    .grid-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .campo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campo-completo {
+      grid-column: 1 / -1;
+    }
+
+    .campo label {
+      color: #e2e8f0;
+      font-weight: bold;
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    .campo input,
+    .campo textarea,
+    .campo select {
+      width: 100%;
+      padding: 12px;
+
+      border: 1px solid #475569;
+      border-radius: 8px;
+
+      background: #0f172a;
+      color: white;
+
+      font-size: 15px;
+
+      outline: none;
+    }
+
+    .campo input:focus,
+    .campo textarea:focus,
+    .campo select:focus {
+      border-color: #a855f7;
+      box-shadow: 0 0 0 2px rgba(168,85,247,0.15);
+    }
+
+    .campo textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .ajuda {
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    /* =========================
+       MODELOS
+    ========================= */
+
+    .modelos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .modelo {
+      padding: 18px;
+      border: 2px solid #475569;
+      border-radius: 12px;
+      background: #0f172a;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .modelo:hover {
+      border-color: #a855f7;
+      transform: translateY(-3px);
+    }
+
+    .modelo.selecionado {
+      border-color: #a855f7;
+      background: #312e81;
+      box-shadow: 0 0 15px rgba(168,85,247,0.2);
+    }
+
+    .modelo strong {
+      display: block;
+      color: #e9d5ff;
+      margin-bottom: 7px;
+    }
+
+    .modelo span {
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 14px 22px;
+
+      font-weight: bold;
+      font-size: 15px;
+
+      cursor: pointer;
+
+      transition: 0.25s;
+    }
+
+    .btn-gerar {
+      background: linear-gradient(135deg, #7e22ce, #a855f7);
+      color: white;
+      box-shadow: 0 5px 15px rgba(168,85,247,0.3);
+    }
+
+    .btn-gerar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(168,85,247,0.4);
+    }
+
+    .btn-limpar {
+      background: #334155;
+      color: white;
+    }
+
+    .btn-limpar:hover {
+      background: #475569;
+    }
+
+    .btn-imprimir {
+      background: #16a34a;
+      color: white;
+    }
+
+    .btn-imprimir:hover {
+      background: #15803d;
+    }
+
+    /* =========================
+       PRÉ-VISUALIZAÇÃO
+    ========================= */
+
+    #areaPreview {
+      display: none;
+      margin-top: 35px;
+    }
+
+    .preview-titulo {
+      text-align: center;
+      color: #c084fc;
+      margin-bottom: 20px;
+    }
+
+    .curriculo {
+      background: white;
+      color: #222;
+      max-width: 800px;
+      margin: auto;
+      padding: 45px;
+
+      min-height: 1000px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      border-radius: 5px;
+    }
+
+    .curriculo-cabecalho {
+      border-bottom: 3px solid #7e22ce;
+      padding-bottom: 18px;
+      margin-bottom: 25px;
+    }
+
+    .curriculo-cabecalho h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      color: #111827;
+    }
+
+    .curriculo-contato {
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .curriculo-secao {
+      margin-bottom: 22px;
+    }
+
+    .curriculo-secao h2 {
+      color: #7e22ce;
+      font-size: 17px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .curriculo-secao p {
+      margin: 5px 0;
+      line-height: 1.6;
+      color: #334155;
+      white-space: pre-line;
+    }
+
+    .curriculo-secao ul {
+      padding-left: 20px;
+      color: #334155;
+    }
+
+    .curriculo-secao li {
+      margin: 5px 0;
+    }
+
+    /* =========================
        RODAPÉ
     ========================= */
 
@@ -226,7 +503,7 @@
        CELULAR
     ========================= */
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
       header {
         font-size: 18px;
@@ -265,6 +542,68 @@
 
       .container {
         padding: 25px 15px;
+      }
+
+      .grid-form {
+        grid-template-columns: 1fr;
+      }
+
+      .campo-completo {
+        grid-column: auto;
+      }
+
+      .modelos {
+        grid-template-columns: 1fr;
+      }
+
+      .gerador {
+        padding: 18px;
+      }
+
+      .curriculo {
+        padding: 25px;
+      }
+    }
+
+    /* =========================
+       IMPRESSÃO / PDF
+    ========================= */
+
+    @media print {
+
+      body {
+        background: white;
+      }
+
+      header,
+      nav,
+      .banner,
+      .card,
+      .dica,
+      .gerador-titulo,
+      .secao-formulario,
+      .botoes,
+      .preview-titulo,
+      footer {
+        display: none !important;
+      }
+
+      #areaPreview {
+        display: block !important;
+        margin: 0;
+      }
+
+      .curriculo {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        padding: 25px;
+      }
+
+      .curriculo-secao {
+        page-break-inside: avoid;
       }
     }
 
@@ -326,8 +665,8 @@
     <h1>📄 Como fazer um bom currículo?</h1>
 
     <p>
-      Seu currículo é uma das primeiras formas de apresentar
-      suas habilidades para uma empresa.
+      Aprenda a montar um currículo profissional
+      e crie o seu gratuitamente.
     </p>
 
   </div>
@@ -336,6 +675,8 @@
 
 
 <div class="container">
+
+  <!-- INFORMAÇÕES -->
 
   <div class="card">
 
@@ -387,22 +728,121 @@
 
   <div class="dica">
 
-    <h2>💡 Dica</h2>
+    <h2>💡 Dica para o primeiro emprego</h2>
 
     <p>
       Mesmo que você nunca tenha trabalhado, pode colocar
       sua formação escolar, cursos, projetos escolares,
-      conhecimentos de informática e outras habilidades.
+      conhecimentos de informática, trabalhos voluntários
+      e outras habilidades.
     </p>
 
   </div>
 
-</div>
+
+  <!-- =========================
+       GERADOR
+  ========================= -->
+
+  <section class="gerador">
+
+    <div class="gerador-titulo">
+
+      <h2>✨ Crie seu currículo</h2>
+
+      <p>
+        Preencha as informações abaixo e o Cidadão do Futuro
+        criará um currículo organizado para você.
+      </p>
+
+    </div>
 
 
-<footer>
-  Cidadão do Futuro | Educação para a Cidadania
-</footer>
+    <!-- DADOS PESSOAIS -->
 
-</body>
-</html>
+    <div class="secao-formulario">
+
+      <h3>👤 Dados pessoais</h3>
+
+      <div class="grid-form">
+
+        <div class="campo campo-completo">
+
+          <label for="nome">Nome completo *</label>
+
+          <input
+            type="text"
+            id="nome"
+            placeholder="Ex.: Maria Silva"
+          >
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="cidade">Cidade / Estado</label>
+
+          <input
+            type="text"
+            id="cidade"
+            placeholder="Ex.: Fortaleza - CE"
+          >
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="telefone">Telefone</label>
+
+          <input
+            type="tel"
+            id="telefone"
+            placeholder="Ex.: (85) 99999-9999"
+          >
+
+        </div>
+
+
+        <div class="campo campo-completo">
+
+          <label for="email">E-mail</label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Ex.: seuemail@email.com"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- OBJETIVO -->
+
+    <div class="secao-formulario">
+
+      <h3>🎯 Objetivo profissional</h3>
+
+      <div class="grid-form">
+
+        <div class="campo">
+
+          <label for="objetivoTipo">Objetivo</label>
+
+          <select id="objetivoTipo">
+
+            <option value="Primeiro emprego">
+              Primeiro emprego
+            </option>
+
+            <option value="Jovem Aprendiz">
+              Jovem Aprendiz
+            </option>
+
+            <option value="Es
+```
