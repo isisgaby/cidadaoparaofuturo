@@ -173,12 +173,6 @@
       margin-bottom: 20px;
 
       box-shadow: 0 5px 18px rgba(0,0,0,0.25);
-
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
     }
 
     .card h2 {
@@ -195,45 +189,189 @@
       margin: 10px 0;
     }
 
-    .dica {
+    /* =========================
+       ÁREA DE VÍDEOS
+    ========================= */
+
+    .videos-area {
       background: linear-gradient(135deg, #312e81, #4c1d95);
-      padding: 25px;
-      border-radius: 15px;
-      margin-top: 20px;
+
+      padding: 30px;
+
+      border-radius: 18px;
+
+      margin: 30px 0;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     }
 
-    .dica h2 {
-      color: #e9d5ff;
+    .videos-area h2 {
+      color: #f3e8ff;
+      margin-top: 0;
     }
 
-    .dica p {
+    .videos-area p {
       color: #ddd6fe;
       line-height: 1.6;
     }
 
+    .videos-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 20px;
+
+      margin-top: 20px;
+    }
+
+    .video-card {
+      background: #111827;
+
+      border-radius: 15px;
+
+      padding: 20px;
+
+      border: 1px solid
+        rgba(192,132,252,0.2);
+
+      transition: 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #a855f7;
+    }
+
+    .video-card h3 {
+      color: #e9d5ff;
+    }
+
+    .video-card p {
+      color: #94a3b8;
+    }
+
+    .video-link {
+      display: inline-block;
+
+      margin-top: 10px;
+
+      background: #a855f7;
+
+      color: white;
+
+      padding: 12px 18px;
+
+      border-radius: 9px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .video-link:hover {
+      background: #7e22ce;
+    }
+
     /* =========================
-       GERADOR DE CURRÍCULO
+       LINK EXTERNO
+    ========================= */
+
+    .externo {
+      background: #1e293b;
+
+      padding: 25px;
+
+      border-radius: 15px;
+
+      margin-bottom: 30px;
+
+      border: 1px solid
+        rgba(168,85,247,0.2);
+
+      text-align: center;
+    }
+
+    .externo h2 {
+      color: #c084fc;
+    }
+
+    .externo p {
+      color: #cbd5e1;
+
+      line-height: 1.6;
+    }
+
+    .btn-externo {
+      display: inline-block;
+
+      margin-top: 10px;
+
+      padding: 14px 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #7e22ce,
+          #a855f7
+        );
+
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 10px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .btn-externo:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 7px 20px
+        rgba(168,85,247,0.3);
+    }
+
+    /* =========================
+       GERADOR
     ========================= */
 
     .gerador {
       background: #111827;
+
       padding: 30px;
+
       border-radius: 20px;
+
       margin-top: 35px;
 
-      border: 1px solid rgba(168, 85, 247, 0.3);
+      border:
+        1px solid
+        rgba(168,85,247,0.3);
 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.3);
     }
 
     .gerador-titulo {
       text-align: center;
+
       margin-bottom: 30px;
     }
 
     .gerador-titulo h2 {
       color: #c084fc;
+
       font-size: 30px;
+
       margin-bottom: 10px;
     }
 
@@ -242,31 +380,43 @@
     }
 
     .secao-formulario {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+
       padding: 22px;
 
       background: #1e293b;
 
       border-radius: 15px;
 
-      border: 1px solid rgba(168, 85, 247, 0.15);
+      border:
+        1px solid
+        rgba(168,85,247,0.15);
     }
 
     .secao-formulario h3 {
       color: #c084fc;
+
       margin-top: 0;
-      border-bottom: 1px solid rgba(192,132,252,0.2);
+
+      border-bottom:
+        1px solid
+        rgba(192,132,252,0.2);
+
       padding-bottom: 10px;
     }
 
     .grid-form {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 15px;
     }
 
     .campo {
       display: flex;
+
       flex-direction: column;
     }
 
@@ -276,8 +426,11 @@
 
     .campo label {
       color: #e2e8f0;
+
       font-weight: bold;
+
       margin-bottom: 7px;
+
       font-size: 14px;
     }
 
@@ -285,12 +438,17 @@
     .campo textarea,
     .campo select {
       width: 100%;
+
       padding: 12px;
 
-      border: 1px solid #475569;
+      border:
+        1px solid
+        #475569;
+
       border-radius: 8px;
 
       background: #0f172a;
+
       color: white;
 
       font-size: 15px;
@@ -302,18 +460,24 @@
     .campo textarea:focus,
     .campo select:focus {
       border-color: #a855f7;
-      box-shadow: 0 0 0 2px rgba(168,85,247,0.15);
+
+      box-shadow:
+        0 0 0 2px
+        rgba(168,85,247,0.15);
     }
 
     .campo textarea {
       min-height: 100px;
+
       resize: vertical;
     }
 
     .ajuda {
       color: #94a3b8;
+
       font-size: 12px;
-      margin-top: 5px;
+
+      margin-top: 7px;
     }
 
     /* =========================
@@ -322,39 +486,58 @@
 
     .modelos {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 15px;
     }
 
     .modelo {
       padding: 18px;
-      border: 2px solid #475569;
+
+      border:
+        2px solid
+        #475569;
+
       border-radius: 12px;
+
       background: #0f172a;
+
       cursor: pointer;
+
       text-align: center;
+
       transition: 0.3s;
     }
 
     .modelo:hover {
       border-color: #a855f7;
+
       transform: translateY(-3px);
     }
 
     .modelo.selecionado {
       border-color: #a855f7;
+
       background: #312e81;
-      box-shadow: 0 0 15px rgba(168,85,247,0.2);
+
+      box-shadow:
+        0 0 15px
+        rgba(168,85,247,0.2);
     }
 
     .modelo strong {
       display: block;
+
       color: #e9d5ff;
+
       margin-bottom: 7px;
     }
 
     .modelo span {
       color: #94a3b8;
+
       font-size: 13px;
     }
 
@@ -364,18 +547,25 @@
 
     .botoes {
       display: flex;
+
       justify-content: center;
+
       gap: 12px;
+
       flex-wrap: wrap;
+
       margin: 30px 0;
     }
 
     button {
       border: none;
+
       border-radius: 10px;
+
       padding: 14px 22px;
 
       font-weight: bold;
+
       font-size: 15px;
 
       cursor: pointer;
@@ -383,33 +573,45 @@
       transition: 0.25s;
     }
 
-    .btn-gerar {
-      background: linear-gradient(135deg, #7e22ce, #a855f7);
-      color: white;
-      box-shadow: 0 5px 15px rgba(168,85,247,0.3);
+    button:hover {
+      transform: translateY(-2px);
     }
 
-    .btn-gerar:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(168,85,247,0.4);
+    .btn-gerar {
+      background:
+        linear-gradient(
+          135deg,
+          #7e22ce,
+          #a855f7
+        );
+
+      color: white;
+
+      box-shadow:
+        0 5px 15px
+        rgba(168,85,247,0.3);
     }
 
     .btn-limpar {
       background: #334155;
+
       color: white;
     }
 
-    .btn-limpar:hover {
-      background: #475569;
-    }
-
-    .btn-imprimir {
+    .btn-finalizar {
       background: #16a34a;
+
       color: white;
+
+      font-size: 17px;
+
+      padding: 15px 30px;
     }
 
-    .btn-imprimir:hover {
-      background: #15803d;
+    .btn-voltar {
+      background: #475569;
+
+      color: white;
     }
 
     /* =========================
@@ -418,43 +620,61 @@
 
     #areaPreview {
       display: none;
-      margin-top: 35px;
+
+      margin-top: 40px;
     }
 
     .preview-titulo {
       text-align: center;
+
       color: #c084fc;
+
       margin-bottom: 20px;
     }
 
     .curriculo {
       background: white;
+
       color: #222;
+
       max-width: 800px;
+
       margin: auto;
+
       padding: 45px;
 
       min-height: 1000px;
 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.4);
+
       border-radius: 5px;
     }
 
     .curriculo-cabecalho {
-      border-bottom: 3px solid #7e22ce;
+      border-bottom:
+        3px solid
+        #7e22ce;
+
       padding-bottom: 18px;
+
       margin-bottom: 25px;
     }
 
     .curriculo-cabecalho h1 {
       margin: 0 0 8px;
+
       font-size: 30px;
+
       color: #111827;
     }
 
     .curriculo-contato {
       color: #475569;
+
       font-size: 14px;
+
       line-height: 1.7;
     }
 
@@ -464,27 +684,62 @@
 
     .curriculo-secao h2 {
       color: #7e22ce;
+
       font-size: 17px;
-      border-bottom: 1px solid #ddd;
+
+      border-bottom:
+        1px solid
+        #ddd;
+
       padding-bottom: 6px;
+
       margin-bottom: 10px;
+
       text-transform: uppercase;
     }
 
     .curriculo-secao p {
       margin: 5px 0;
+
       line-height: 1.6;
+
       color: #334155;
+
       white-space: pre-line;
     }
 
-    .curriculo-secao ul {
-      padding-left: 20px;
-      color: #334155;
+    /* =========================
+       FINALIZAÇÃO
+    ========================= */
+
+    .finalizacao {
+      max-width: 800px;
+
+      margin: 25px auto 0;
+
+      padding: 25px;
+
+      text-align: center;
+
+      background: #1e293b;
+
+      border-radius: 15px;
+
+      border:
+        1px solid
+        rgba(168,85,247,0.25);
     }
 
-    .curriculo-secao li {
-      margin: 5px 0;
+    .finalizacao h3 {
+      color: #c084fc;
+
+      margin-top: 0;
+    }
+
+    .finalizacao p {
+      color: #cbd5e1;
+
+      line-height: 1.6;
     }
 
     /* =========================
@@ -493,9 +748,13 @@
 
     footer {
       text-align: center;
+
       padding: 20px;
+
       background: #020617;
+
       margin-top: 40px;
+
       color: #cbd5e1;
     }
 
@@ -507,28 +766,33 @@
 
       header {
         font-size: 18px;
+
         padding-left: 85px;
         padding-right: 15px;
       }
 
       .logo-escola {
         left: 10px;
+
         width: 55px;
         height: 55px;
       }
 
       nav {
         padding: 10px;
+
         gap: 5px;
       }
 
       nav a {
         font-size: 13px;
+
         padding: 8px 10px;
       }
 
       .banner {
         min-height: 360px;
+
         padding: 25px 15px;
       }
 
@@ -542,6 +806,10 @@
 
       .container {
         padding: 25px 15px;
+      }
+
+      .videos-grid {
+        grid-template-columns: 1fr;
       }
 
       .grid-form {
@@ -563,6 +831,7 @@
       .curriculo {
         padding: 25px;
       }
+
     }
 
     /* =========================
@@ -579,38 +848,50 @@
       nav,
       .banner,
       .card,
-      .dica,
+      .videos-area,
+      .externo,
       .gerador-titulo,
       .secao-formulario,
-      .botoes,
+      .gerador > .botoes,
       .preview-titulo,
+      .finalizacao,
       footer {
         display: none !important;
       }
 
       #areaPreview {
         display: block !important;
+
         margin: 0;
       }
 
       .curriculo {
-        box-shadow: none;
-        border-radius: 0;
         width: 100%;
+
         max-width: none;
+
         min-height: auto;
+
         padding: 25px;
+
+        box-shadow: none;
+
+        border-radius: 0;
       }
 
       .curriculo-secao {
         page-break-inside: avoid;
       }
+
     }
 
   </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -627,7 +908,9 @@
 
 <nav>
 
-  <a href="index.html">🏠 Início</a>
+  <a href="index.html">
+    🏠 Início
+  </a>
 
   <a href="curriculo.html" class="ativo">
     📄 Currículo
@@ -660,13 +943,18 @@
 
   <div class="banner-conteudo">
 
-    <small>PREPARAÇÃO PARA O FUTURO</small>
+    <small>
+      PREPARAÇÃO PARA O FUTURO
+    </small>
 
-    <h1>📄 Como fazer um bom currículo?</h1>
+    <h1>
+      📄 Crie seu currículo
+    </h1>
 
     <p>
-      Aprenda a montar um currículo profissional
-      e crie o seu gratuitamente.
+      Aprenda sobre currículos, prepare-se para
+      entrevistas e crie seu próprio currículo
+      gratuitamente dentro do Cidadão do Futuro.
     </p>
 
   </div>
@@ -676,16 +964,23 @@
 
 <div class="container">
 
-  <!-- INFORMAÇÕES -->
+
+  <!-- =========================
+       INFORMAÇÕES
+  ========================= -->
+
 
   <div class="card">
 
-    <h2>📌 O que é um currículo?</h2>
+    <h2>
+      📌 O que é um currículo?
+    </h2>
 
     <p>
-      O currículo é um documento que apresenta informações
-      importantes sobre uma pessoa, como formação escolar,
-      cursos, habilidades e experiências.
+      O currículo é um documento que apresenta
+      informações importantes sobre uma pessoa,
+      como formação escolar, cursos, habilidades
+      e experiências.
     </p>
 
   </div>
@@ -693,16 +988,36 @@
 
   <div class="card">
 
-    <h2>📝 O que colocar no currículo?</h2>
+    <h2>
+      📝 O que colocar no currículo?
+    </h2>
 
     <ul>
 
-      <li>👤 Nome e informações de contato</li>
-      <li>🎓 Formação escolar</li>
-      <li>📚 Cursos realizados</li>
-      <li>💻 Conhecimentos de informática</li>
-      <li>⭐ Habilidades pessoais</li>
-      <li>💼 Experiências profissionais, quando houver</li>
+      <li>
+        👤 Nome e informações de contato
+      </li>
+
+      <li>
+        🎓 Formação escolar
+      </li>
+
+      <li>
+        📚 Cursos realizados
+      </li>
+
+      <li>
+        💻 Conhecimentos de informática
+      </li>
+
+      <li>
+        ⭐ Habilidades pessoais
+      </li>
+
+      <li>
+        💼 Experiências profissionais,
+        quando houver
+      </li>
 
     </ul>
 
@@ -711,48 +1026,160 @@
 
   <div class="card">
 
-    <h2>⚠️ O que evitar?</h2>
+    <h2>
+      ⚠️ O que evitar?
+    </h2>
 
     <ul>
 
-      <li>❌ Mentir sobre experiências ou cursos</li>
-      <li>❌ Colocar informações desnecessárias</li>
-      <li>❌ Erros de português</li>
-      <li>❌ Usar um currículo muito longo</li>
-      <li>❌ Colocar informações pessoais que não são necessárias</li>
+      <li>
+        ❌ Mentir sobre experiências ou cursos
+      </li>
+
+      <li>
+        ❌ Colocar informações desnecessárias
+      </li>
+
+      <li>
+        ❌ Erros de português
+      </li>
+
+      <li>
+        ❌ Fazer um currículo muito longo
+      </li>
+
+      <li>
+        ❌ Colocar informações pessoais
+        desnecessárias
+      </li>
 
     </ul>
-
-  </div>
-
-
-  <div class="dica">
-
-    <h2>💡 Dica para o primeiro emprego</h2>
-
-    <p>
-      Mesmo que você nunca tenha trabalhado, pode colocar
-      sua formação escolar, cursos, projetos escolares,
-      conhecimentos de informática, trabalhos voluntários
-      e outras habilidades.
-    </p>
 
   </div>
 
 
   <!-- =========================
-       GERADOR
+       VIDEOAULAS
   ========================= -->
+
+
+  <section class="videos-area">
+
+    <h2>
+      🎥 Aprenda a se comportar em uma entrevista
+    </h2>
+
+    <p>
+      Antes de procurar um emprego, é importante
+      saber como se comportar durante uma entrevista.
+      Confira conteúdos que podem ajudar você a se
+      preparar.
+    </p>
+
+
+    <div class="videos-grid">
+
+
+      <div class="video-card">
+
+        <h3>
+          🎬 Como se comportar em uma entrevista
+        </h3>
+
+        <p>
+          Aprenda dicas importantes sobre postura,
+          comportamento e preparação para uma
+          entrevista de emprego.
+        </p>
+
+        <a
+          href="https://www.youtube.com/watch?v=Arptp_oQ7cA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-link"
+        >
+          ▶️ Assistir vídeo
+        </a>
+
+      </div>
+
+
+      <div class="video-card">
+
+        <h3>
+          💬 Preparação para entrevista
+        </h3>
+
+        <p>
+          Pesquise outros conteúdos sobre entrevistas
+          e descubra como responder às perguntas
+          mais comuns.
+        </p>
+
+        <a
+          href="https://www.youtube.com/results?search_query=como+se+comportar+em+uma+entrevista+de+emprego"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-link"
+        >
+          🔎 Ver videoaulas
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       LINK EXTERNO
+  ========================= -->
+
+
+  <section class="externo">
+
+    <h2>
+      🌐 Outra opção para criar seu currículo
+    </h2>
+
+    <p>
+      Você também pode utilizar uma ferramenta externa
+      para encontrar outros modelos de currículo
+      e personalizar seu documento.
+    </p>
+
+    <a
+      href="https://www.canva.com/pt_br/criar/curriculo/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-externo"
+    >
+      ✨ Criar currículo no Canva
+    </a>
+
+  </section>
+
+
+  <!-- =========================
+       GERADOR DENTRO DO SITE
+  ========================= -->
+
 
   <section class="gerador">
 
+
     <div class="gerador-titulo">
 
-      <h2>✨ Crie seu currículo</h2>
+      <h2>
+        🚀 Crie seu currículo aqui
+      </h2>
 
       <p>
-        Preencha as informações abaixo e o Cidadão do Futuro
-        criará um currículo organizado para você.
+        Não precisa sair do site!
+        Preencha as informações abaixo,
+        escolha um modelo e crie seu currículo.
       </p>
 
     </div>
@@ -762,13 +1189,18 @@
 
     <div class="secao-formulario">
 
-      <h3>👤 Dados pessoais</h3>
+      <h3>
+        👤 Dados pessoais
+      </h3>
 
       <div class="grid-form">
 
+
         <div class="campo campo-completo">
 
-          <label for="nome">Nome completo *</label>
+          <label for="nome">
+            Nome completo *
+          </label>
 
           <input
             type="text"
@@ -781,7 +1213,9 @@
 
         <div class="campo">
 
-          <label for="cidade">Cidade / Estado</label>
+          <label for="cidade">
+            Cidade / Estado
+          </label>
 
           <input
             type="text"
@@ -794,7 +1228,9 @@
 
         <div class="campo">
 
-          <label for="telefone">Telefone</label>
+          <label for="telefone">
+            Telefone
+          </label>
 
           <input
             type="tel"
@@ -807,7 +1243,9 @@
 
         <div class="campo campo-completo">
 
-          <label for="email">E-mail</label>
+          <label for="email">
+            E-mail
+          </label>
 
           <input
             type="email"
@@ -816,6 +1254,7 @@
           >
 
         </div>
+
 
       </div>
 
@@ -826,23 +1265,1176 @@
 
     <div class="secao-formulario">
 
-      <h3>🎯 Objetivo profissional</h3>
+      <h3>
+        🎯 Objetivo profissional
+      </h3>
 
       <div class="grid-form">
 
+
         <div class="campo">
 
-          <label for="objetivoTipo">Objetivo</label>
+          <label for="objetivoTipo">
+            Tipo de oportunidade
+          </label>
 
           <select id="objetivoTipo">
 
-            <option value="Primeiro emprego">
+            <option>
               Primeiro emprego
             </option>
 
-            <option value="Jovem Aprendiz">
+            <option>
               Jovem Aprendiz
             </option>
 
-            <option value="Es
+            <option>
+              Estágio
+            </option>
+
+            <option>
+              Emprego
+            </option>
+
+            <option>
+              Outra oportunidade
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="area">
+            Área desejada
+          </label>
+
+          <input
+            type="text"
+            id="area"
+            placeholder="Ex.: Administração"
+          >
+
+        </div>
+
+
+        <div class="campo campo-completo">
+
+          <label for="objetivoTexto">
+            Sobre seu objetivo
+          </label>
+
+          <textarea
+            id="objetivoTexto"
+            placeholder="Ex.: Busco uma oportunidade para desenvolver minhas habilidades e adquirir experiência profissional."
+          ></textarea>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <!-- FORMAÇÃO -->
+
+    <div class="secao-formulario">
+
+      <h3>
+        🎓 Formação acadêmica
+      </h3>
+
+      <div class="grid-form">
+
+
+        <div class="campo campo-completo">
+
+          <label for="escola">
+            Escola / Instituição
+          </label>
+
+          <input
+            type="text"
+            id="escola"
+            placeholder="Ex.: E.E.M. Padre Coriolano"
+          >
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="cursoFormacao">
+            Curso / Escolaridade
+          </label>
+
+          <input
+            type="text"
+            id="cursoFormacao"
+            placeholder="Ex.: Ensino Médio"
+          >
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="conclusao">
+            Conclusão
+          </label>
+
+          <input
+            type="text"
+            id="conclusao"
+            placeholder="Ex.: 2027"
+          >
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <!-- EXPERIÊNCIA -->
+
+    <div class="secao-formulario">
+
+      <h3>
+        💼 Experiência profissional
+      </h3>
+
+      <div class="grid-form">
+
+
+        <div class="campo">
+
+          <label for="empresa">
+            Empresa / Local
+          </label>
+
+          <input
+            type="text"
+            id="empresa"
+            placeholder="Se não tiver, deixe vazio"
+          >
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="cargo">
+            Cargo / Função
+          </label>
+
+          <input
+            type="text"
+            id="cargo"
+            placeholder="Ex.: Auxiliar"
+          >
+
+        </div>
+
+
+        <div class="campo campo-completo">
+
+          <label for="periodo">
+            Período
+          </label>
+
+          <input
+            type="text"
+            id="periodo"
+            placeholder="Ex.: Janeiro de 2025 a Dezembro de 2025"
+          >
+
+        </div>
+
+
+        <div class="campo campo-completo">
+
+          <label for="atividades">
+            Principais atividades
+          </label>
+
+          <textarea
+            id="atividades"
+            placeholder="Descreva as atividades realizadas."
+          ></textarea>
+
+        </div>
+
+
+      </div>
+
+      <div class="ajuda">
+        💡 Não possui experiência? Deixe os campos vazios.
+      </div>
+
+    </div>
+
+
+    <!-- CURSOS -->
+
+    <div class="secao-formulario">
+
+      <h3>
+        📚 Cursos e qualificações
+      </h3>
+
+      <div class="campo">
+
+        <label for="cursos">
+          Cursos, certificados e conhecimentos
+        </label>
+
+        <textarea
+          id="cursos"
+          placeholder="Ex.:
+Informática Básica
+Pacote Office
+Excel
+Inglês"
+        ></textarea>
+
+      </div>
+
+    </div>
+
+
+    <!-- HABILIDADES -->
+
+    <div class="secao-formulario">
+
+      <h3>
+        ⭐ Habilidades
+      </h3>
+
+      <div class="campo">
+
+        <label for="habilidades">
+          Suas principais habilidades
+        </label>
+
+        <textarea
+          id="habilidades"
+          placeholder="Ex.:
+Comunicação
+Trabalho em equipe
+Organização
+Criatividade
+Informática"
+        ></textarea>
+
+      </div>
+
+    </div>
+
+
+    <!-- IDIOMAS -->
+
+    <div class="secao-formulario">
+
+      <h3>
+        🌎 Idiomas
+      </h3>
+
+      <div class="campo">
+
+        <label for="idiomas">
+          Idiomas e nível
+        </label>
+
+        <textarea
+          id="idiomas"
+          placeholder="Ex.:
+Português - Nativo
+Inglês - Básico"
+        ></textarea>
+
+      </div>
+
+    </div>
+
+
+    <!-- PROJETOS -->
+
+    <div class="secao-formulario">
+
+      <h3>
+        🚀 Projetos e atividades
+      </h3>
+
+      <div class="campo">
+
+        <label for="projetos">
+          Projetos escolares, voluntariado ou atividades
+        </label>
+
+        <textarea
+          id="projetos"
+          placeholder="Ex.:
+Projeto Cidadão do Futuro
+Projetos escolares
+Trabalho voluntário"
+        ></textarea>
+
+      </div>
+
+    </div>
+
+
+    <!-- MODELOS -->
+
+    <div class="secao-formulario">
+
+      <h3>
+        🎨 Escolha o modelo
+      </h3>
+
+      <div class="modelos">
+
+
+        <div
+          class="modelo selecionado"
+          data-modelo="moderno"
+          onclick="selecionarModelo(this)"
+        >
+
+          <strong>
+            🟣 Moderno
+          </strong>
+
+          <span>
+            Visual atual e profissional
+          </span>
+
+        </div>
+
+
+        <div
+          class="modelo"
+          data-modelo="simples"
+          onclick="selecionarModelo(this)"
+        >
+
+          <strong>
+            ⚫ Simples
+          </strong>
+
+          <span>
+            Limpo e direto
+          </span>
+
+        </div>
+
+
+        <div
+          class="modelo"
+          data-modelo="jovem"
+          onclick="selecionarModelo(this)"
+        >
+
+          <strong>
+            🔵 Jovem
+          </strong>
+
+          <span>
+            Ideal para primeiro emprego
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <!-- BOTÕES -->
+
+    <div class="botoes">
+
+      <button
+        type="button"
+        class="btn-gerar"
+        onclick="gerarCurriculo()"
+      >
+        ✨ Criar meu currículo
+      </button>
+
+
+      <button
+        type="button"
+        class="btn-limpar"
+        onclick="limparFormulario()"
+      >
+        🗑️ Limpar tudo
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         CURRÍCULO GERADO
+    ========================= -->
+
+
+    <div id="areaPreview">
+
+
+      <h2 class="preview-titulo">
+        🎉 Seu currículo está pronto!
+      </h2>
+
+
+      <div class="curriculo" id="curriculo">
+
+
+        <div class="curriculo-cabecalho">
+
+          <h1 id="previewNome">
+            Seu Nome
+          </h1>
+
+          <div
+            class="curriculo-contato"
+            id="previewContato"
+          ></div>
+
+        </div>
+
+
+        <div
+          class="curriculo-secao"
+          id="secaoObjetivo"
+        >
+
+          <h2>
+            Objetivo profissional
+          </h2>
+
+          <p id="previewObjetivo"></p>
+
+        </div>
+
+
+        <div
+          class="curriculo-secao"
+          id="secaoFormacao"
+        >
+
+          <h2>
+            Formação acadêmica
+          </h2>
+
+          <p id="previewFormacao"></p>
+
+        </div>
+
+
+        <div
+          class="curriculo-secao"
+          id="secaoExperiencia"
+        >
+
+          <h2>
+            Experiência profissional
+          </h2>
+
+          <p id="previewExperiencia"></p>
+
+        </div>
+
+
+        <div
+          class="curriculo-secao"
+          id="secaoCursos"
+        >
+
+          <h2>
+            Cursos e qualificações
+          </h2>
+
+          <p id="previewCursos"></p>
+
+        </div>
+
+
+        <div
+          class="curriculo-secao"
+          id="secaoHabilidades"
+        >
+
+          <h2>
+            Habilidades
+          </h2>
+
+          <p id="previewHabilidades"></p>
+
+        </div>
+
+
+        <div
+          class="curriculo-secao"
+          id="secaoIdiomas"
+        >
+
+          <h2>
+            Idiomas
+          </h2>
+
+          <p id="previewIdiomas"></p>
+
+        </div>
+
+
+        <div
+          class="curriculo-secao"
+          id="secaoProjetos"
+        >
+
+          <h2>
+            Projetos e atividades
+          </h2>
+
+          <p id="previewProjetos"></p>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- FINALIZAÇÃO -->
+
+      <div class="finalizacao">
+
+        <h3>
+          ✅ Currículo finalizado!
+        </h3>
+
+        <p>
+          Seu currículo foi criado com sucesso.
+          Clique no botão abaixo para imprimir ou
+          escolher a opção <strong>“Salvar como PDF”</strong>.
+        </p>
+
+
+        <div class="botoes">
+
+          <button
+            type="button"
+            class="btn-finalizar"
+            onclick="finalizarCurriculo()"
+          >
+            📄 Finalizar e salvar em PDF
+          </button>
+
+
+          <button
+            type="button"
+            class="btn-voltar"
+            onclick="voltarEditar()"
+          >
+            ✏️ Editar currículo
+          </button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+</div>
+
+
+<footer>
+
+  Cidadão do Futuro | Educação para a Cidadania
+
+</footer>
+
+
+<script>
+
+  /* =========================
+     MODELO
+  ========================= */
+
+  let modeloSelecionado = "moderno";
+
+
+  /* =========================
+     SELECIONAR MODELO
+  ========================= */
+
+  function selecionarModelo(elemento) {
+
+    document
+      .querySelectorAll(".modelo")
+      .forEach(function(modelo) {
+
+        modelo.classList.remove(
+          "selecionado"
+        );
+
+      });
+
+
+    elemento.classList.add(
+      "selecionado"
+    );
+
+
+    modeloSelecionado =
+      elemento.getAttribute(
+        "data-modelo"
+      );
+
+  }
+
+
+  /* =========================
+     PEGAR VALOR
+  ========================= */
+
+  function valor(id) {
+
+    const elemento =
+      document.getElementById(id);
+
+
+    if (!elemento) {
+      return "";
+    }
+
+
+    return elemento.value.trim();
+
+  }
+
+
+  /* =========================
+     GERAR CURRÍCULO
+  ========================= */
+
+  function gerarCurriculo() {
+
+    const nome =
+      valor("nome");
+
+
+    if (!nome) {
+
+      alert(
+        "⚠️ Digite seu nome completo para criar o currículo."
+      );
+
+
+      document
+        .getElementById("nome")
+        .focus();
+
+
+      return;
+
+    }
+
+
+    const cidade =
+      valor("cidade");
+
+    const telefone =
+      valor("telefone");
+
+    const email =
+      valor("email");
+
+
+    const objetivoTipo =
+      valor("objetivoTipo");
+
+    const area =
+      valor("area");
+
+    const objetivoTexto =
+      valor("objetivoTexto");
+
+
+    const escola =
+      valor("escola");
+
+    const cursoFormacao =
+      valor("cursoFormacao");
+
+    const conclusao =
+      valor("conclusao");
+
+
+    const empresa =
+      valor("empresa");
+
+    const cargo =
+      valor("cargo");
+
+    const periodo =
+      valor("periodo");
+
+    const atividades =
+      valor("atividades");
+
+
+    const cursos =
+      valor("cursos");
+
+    const habilidades =
+      valor("habilidades");
+
+    const idiomas =
+      valor("idiomas");
+
+    const projetos =
+      valor("projetos");
+
+
+    /* NOME */
+
+    document
+      .getElementById(
+        "previewNome"
+      )
+      .textContent = nome;
+
+
+    /* CONTATO */
+
+    let contato = [];
+
+
+    if (cidade) {
+      contato.push(cidade);
+    }
+
+
+    if (telefone) {
+      contato.push(telefone);
+    }
+
+
+    if (email) {
+      contato.push(email);
+    }
+
+
+    document
+      .getElementById(
+        "previewContato"
+      )
+      .textContent =
+      contato.join(" | ");
+
+
+    /* OBJETIVO */
+
+    let objetivo =
+      objetivoTipo;
+
+
+    if (area) {
+
+      objetivo +=
+        " - Área: " +
+        area;
+
+    }
+
+
+    if (objetivoTexto) {
+
+      objetivo +=
+        "\n\n" +
+        objetivoTexto;
+
+    }
+
+
+    preencherSecao(
+      "secaoObjetivo",
+      "previewObjetivo",
+      objetivo
+    );
+
+
+    /* FORMAÇÃO */
+
+    let formacao = "";
+
+
+    if (cursoFormacao) {
+
+      formacao +=
+        cursoFormacao;
+
+    }
+
+
+    if (escola) {
+
+      formacao +=
+        (formacao ? "\n" : "") +
+        escola;
+
+    }
+
+
+    if (conclusao) {
+
+      formacao +=
+        (formacao ? "\n" : "") +
+        "Conclusão: " +
+        conclusao;
+
+    }
+
+
+    preencherSecao(
+      "secaoFormacao",
+      "previewFormacao",
+      formacao
+    );
+
+
+    /* EXPERIÊNCIA */
+
+    let experiencia = "";
+
+
+    if (empresa) {
+
+      experiencia +=
+        empresa;
+
+    }
+
+
+    if (cargo) {
+
+      experiencia +=
+        (experiencia ? "\n" : "") +
+        cargo;
+
+    }
+
+
+    if (periodo) {
+
+      experiencia +=
+        (experiencia ? "\n" : "") +
+        periodo;
+
+    }
+
+
+    if (atividades) {
+
+      experiencia +=
+        (experiencia ? "\n\n" : "") +
+        atividades;
+
+    }
+
+
+    preencherSecao(
+      "secaoExperiencia",
+      "previewExperiencia",
+      experiencia
+    );
+
+
+    /* OUTRAS SEÇÕES */
+
+    preencherSecao(
+      "secaoCursos",
+      "previewCursos",
+      cursos
+    );
+
+
+    preencherSecao(
+      "secaoHabilidades",
+      "previewHabilidades",
+      habilidades
+    );
+
+
+    preencherSecao(
+      "secaoIdiomas",
+      "previewIdiomas",
+      idiomas
+    );
+
+
+    preencherSecao(
+      "secaoProjetos",
+      "previewProjetos",
+      projetos
+    );
+
+
+    /* MODELO */
+
+    aplicarModelo();
+
+
+    /* MOSTRAR */
+
+    document
+      .getElementById(
+        "areaPreview"
+      )
+      .style.display =
+      "block";
+
+
+    document
+      .getElementById(
+        "areaPreview"
+      )
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+
+  }
+
+
+  /* =========================
+     SEÇÕES
+  ========================= */
+
+  function preencherSecao(
+    secao,
+    elemento,
+    texto
+  ) {
+
+    const bloco =
+      document.getElementById(
+        secao
+      );
+
+
+    const campo =
+      document.getElementById(
+        elemento
+      );
+
+
+    if (texto) {
+
+      bloco.style.display =
+        "block";
+
+      campo.textContent =
+        texto;
+
+    } else {
+
+      bloco.style.display =
+        "none";
+
+    }
+
+  }
+
+
+  /* =========================
+     MODELOS
+  ========================= */
+
+  function aplicarModelo() {
+
+    const curriculo =
+      document.getElementById(
+        "curriculo"
+      );
+
+
+    const cabecalho =
+      document.querySelector(
+        ".curriculo-cabecalho"
+      );
+
+
+    const titulos =
+      document.querySelectorAll(
+        ".curriculo-secao h2"
+      );
+
+
+    if (
+      modeloSelecionado ===
+      "moderno"
+    ) {
+
+      curriculo.style.borderTop =
+        "7px solid #7e22ce";
+
+
+      cabecalho.style.borderBottom =
+        "3px solid #7e22ce";
+
+
+      titulos.forEach(
+        function(titulo) {
+
+          titulo.style.color =
+            "#7e22ce";
+
+        }
+      );
+
+    }
+
+
+    if (
+      modeloSelecionado ===
+      "simples"
+    ) {
+
+      curriculo.style.borderTop =
+        "none";
+
+
+      cabecalho.style.borderBottom =
+        "1px solid #999";
+
+
+      titulos.forEach(
+        function(titulo) {
+
+          titulo.style.color =
+            "#222";
+
+        }
+      );
+
+    }
+
+
+    if (
+      modeloSelecionado ===
+      "jovem"
+    ) {
+
+      curriculo.style.borderTop =
+        "7px solid #2563eb";
+
+
+      cabecalho.style.borderBottom =
+        "3px solid #2563eb";
+
+
+      titulos.forEach(
+        function(titulo) {
+
+          titulo.style.color =
+            "#2563eb";
+
+        }
+      );
+
+    }
+
+  }
+
+
+  /* =========================
+     FINALIZAR / PDF
+  ========================= */
+
+  function finalizarCurriculo() {
+
+    window.print();
+
+  }
+
+
+  /* =========================
+     EDITAR
+  ========================= */
+
+  function voltarEditar() {
+
+    document
+      .getElementById(
+        "areaPreview"
+      )
+      .style.display =
+      "none";
+
+
+    document
+      .querySelector(
+        ".gerador"
+      )
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+
+  }
+
+
+  /* =========================
+     LIMPAR
+  ========================= */
+
+  function limparFormulario() {
+
+    const campos =
+      document.querySelectorAll(
+        ".secao-formulario input, " +
+        ".secao-formulario textarea"
+      );
+
+
+    campos.forEach(
+      function(campo) {
+
+        campo.value = "";
+
+      }
+    );
+
+
+    document
+      .getElementById(
+        "areaPreview"
+      )
+      .style.display =
+      "none";
+
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+
+</script>
+
+
+</body>
+
+</html>
 ```
