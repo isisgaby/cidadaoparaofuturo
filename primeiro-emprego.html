@@ -21,6 +21,10 @@
       color: white;
     }
 
+    /* =========================
+       CABEÇALHO
+    ========================= */
+
     header {
       background: #020617;
       padding: 12px 20px;
@@ -46,7 +50,9 @@
       object-fit: contain;
     }
 
-    /* MENU PROFISSIONAL */
+    /* =========================
+       MENU
+    ========================= */
 
     nav {
       background: #020617;
@@ -90,7 +96,9 @@
       box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
     }
 
-    /* BANNER */
+    /* =========================
+       BANNER
+    ========================= */
 
     .banner {
       min-height: 400px;
@@ -143,13 +151,16 @@
     .banner p {
       color: #ddd6fe;
       font-size: 18px;
+      line-height: 1.6;
     }
 
-    /* CONTEÚDO */
+    /* =========================
+       CONTEÚDO
+    ========================= */
 
     .container {
       padding: 35px 20px;
-      max-width: 950px;
+      max-width: 1100px;
       margin: auto;
     }
 
@@ -178,6 +189,10 @@
       line-height: 1.6;
     }
 
+    /* =========================
+       PASSO A PASSO
+    ========================= */
+
     .passo {
       margin: 15px 0;
       padding: 18px;
@@ -189,10 +204,134 @@
       color: #e9d5ff;
     }
 
-    .dica {
-      background: linear-gradient(135deg, #312e81, #4c1d95);
+    /* =========================
+       OPORTUNIDADES
+    ========================= */
+
+    .oportunidades {
+      margin-top: 30px;
+    }
+
+    .oportunidades-titulo {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .oportunidades-titulo h2 {
+      color: #c084fc;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .oportunidades-titulo p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .links-vagas {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .vaga-card {
+      background: #1e293b;
+
       padding: 25px;
+
       border-radius: 15px;
+
+      text-align: center;
+
+      border:
+        1px solid
+        rgba(168, 85, 247, 0.18);
+
+      box-shadow:
+        0 5px 18px
+        rgba(0,0,0,0.25);
+
+      transition: 0.3s;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .vaga-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #a855f7;
+
+      box-shadow:
+        0 10px 25px
+        rgba(168,85,247,0.2);
+    }
+
+    .vaga-card h3 {
+      color: #e9d5ff;
+      font-size: 21px;
+    }
+
+    .vaga-card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .vaga-card a {
+      display: inline-block;
+
+      margin-top: 15px;
+
+      padding: 12px 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #7e22ce,
+          #a855f7
+        );
+
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 9px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .vaga-card a:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 6px 15px
+        rgba(168,85,247,0.3);
+    }
+
+    /* =========================
+       DICA
+    ========================= */
+
+    .dica {
+      background:
+        linear-gradient(
+          135deg,
+          #312e81,
+          #4c1d95
+        );
+
+      padding: 25px;
+
+      border-radius: 15px;
+
+      margin-top: 30px;
     }
 
     .dica h2 {
@@ -204,17 +343,33 @@
       line-height: 1.6;
     }
 
-    /* RODAPÉ */
+    /* =========================
+       RODAPÉ
+    ========================= */
 
     footer {
       text-align: center;
+
       padding: 20px;
+
       background: #020617;
+
       margin-top: 40px;
+
       color: #cbd5e1;
     }
 
-    /* CELULAR */
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .links-vagas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
 
     @media (max-width: 600px) {
 
@@ -241,6 +396,7 @@
 
       .banner {
         min-height: 360px;
+        padding: 25px 15px;
       }
 
       .banner-conteudo {
@@ -254,13 +410,20 @@
       .container {
         padding: 25px 15px;
       }
+
+      .links-vagas {
+        grid-template-columns: 1fr;
+      }
+
     }
 
   </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -312,12 +475,17 @@
 
   <div class="banner-conteudo">
 
-    <small>PREPARE-SE PARA O MERCADO</small>
+    <small>
+      PREPARE-SE PARA O MERCADO
+    </small>
 
-    <h1>💼 Primeiro Emprego</h1>
+    <h1>
+      💼 Primeiro Emprego
+    </h1>
 
     <p>
-      Dicas para começar sua vida profissional.
+      Dicas, oportunidades e ferramentas para
+      começar sua vida profissional.
     </p>
 
   </div>
@@ -327,26 +495,44 @@
 
 <div class="container">
 
+
+  <!-- =========================
+       INTRODUÇÃO
+  ========================= -->
+
   <div class="card">
 
-    <h2>🚀 Como começar?</h2>
+    <h2>
+      🚀 Como começar?
+    </h2>
 
     <p>
       Conseguir o primeiro emprego pode parecer difícil,
       mas existem várias maneiras de se preparar e encontrar
-      oportunidades.
+      oportunidades. O mais importante é começar a construir
+      seu conhecimento, organizar seu currículo e procurar
+      vagas adequadas ao seu perfil.
     </p>
 
   </div>
 
 
+  <!-- =========================
+       PASSO A PASSO
+  ========================= -->
+
   <div class="card">
 
-    <h2>📋 Passo a passo</h2>
+    <h2>
+      📋 Passo a passo
+    </h2>
+
 
     <div class="passo">
 
-      <strong>1️⃣ Prepare seu currículo</strong>
+      <strong>
+        1️⃣ Prepare seu currículo
+      </strong>
 
       <p>
         Organize suas informações, formação escolar,
@@ -358,7 +544,9 @@
 
     <div class="passo">
 
-      <strong>2️⃣ Faça cursos</strong>
+      <strong>
+        2️⃣ Faça cursos
+      </strong>
 
       <p>
         Aprenda novas habilidades e aumente suas
@@ -370,7 +558,9 @@
 
     <div class="passo">
 
-      <strong>3️⃣ Procure oportunidades</strong>
+      <strong>
+        3️⃣ Procure oportunidades
+      </strong>
 
       <p>
         Pesquise vagas de estágio, jovem aprendiz
@@ -382,7 +572,9 @@
 
     <div class="passo">
 
-      <strong>4️⃣ Prepare-se para entrevistas</strong>
+      <strong>
+        4️⃣ Prepare-se para entrevistas
+      </strong>
 
       <p>
         Seja educado, pontual e demonstre interesse
@@ -394,42 +586,259 @@
   </div>
 
 
+  <!-- =========================
+       HABILIDADES
+  ========================= -->
+
   <div class="card">
 
-    <h2>⭐ Habilidades importantes</h2>
+    <h2>
+      ⭐ Habilidades importantes
+    </h2>
 
     <ul>
 
-      <li>Comunicação</li>
-      <li>Responsabilidade</li>
-      <li>Organização</li>
-      <li>Trabalho em equipe</li>
-      <li>Conhecimentos de informática</li>
-      <li>Vontade de aprender</li>
+      <li>
+        Comunicação
+      </li>
+
+      <li>
+        Responsabilidade
+      </li>
+
+      <li>
+        Organização
+      </li>
+
+      <li>
+        Trabalho em equipe
+      </li>
+
+      <li>
+        Conhecimentos de informática
+      </li>
+
+      <li>
+        Vontade de aprender
+      </li>
 
     </ul>
 
   </div>
 
 
+  <!-- =========================
+       LINKS DE OPORTUNIDADES
+  ========================= -->
+
+  <section class="oportunidades">
+
+
+    <div class="oportunidades-titulo">
+
+      <h2>
+        🔎 Onde procurar oportunidades?
+      </h2>
+
+      <p>
+        Confira plataformas onde você pode encontrar
+        vagas de primeiro emprego, Jovem Aprendiz,
+        estágio e outras oportunidades.
+      </p>
+
+    </div>
+
+
+    <div class="links-vagas">
+
+
+      <!-- LINKEDIN -->
+
+      <div class="vaga-card">
+
+        <h3>
+          💼 LinkedIn
+        </h3>
+
+        <p>
+          Crie seu perfil profissional e procure vagas
+          de primeiro emprego, estágio e outras
+          oportunidades.
+        </p>
+
+        <a
+          href="https://br.linkedin.com/jobs/primeiro-emprego-vagas"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🔎 Procurar vagas
+        </a>
+
+      </div>
+
+
+      <!-- CIEE -->
+
+      <div class="vaga-card">
+
+        <h3>
+          👨‍🎓 CIEE
+        </h3>
+
+        <p>
+          Encontre oportunidades de Jovem Aprendiz
+          e estágio e cadastre seu perfil.
+        </p>
+
+        <a
+          href="https://portal.ciee.org.br/quero-uma-vaga/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🚀 Encontrar oportunidades
+        </a>
+
+      </div>
+
+
+      <!-- ESPRO -->
+
+      <div class="vaga-card">
+
+        <h3>
+          🚀 Espro
+        </h3>
+
+        <p>
+          Organização voltada à formação de jovens
+          e oportunidades de aprendizagem profissional.
+        </p>
+
+        <a
+          href="https://www.espro.org.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🌐 Conhecer
+        </a>
+
+      </div>
+
+
+      <!-- IEL -->
+
+      <div class="vaga-card">
+
+        <h3>
+          🏢 IEL Carreiras
+        </h3>
+
+        <p>
+          Plataforma para encontrar oportunidades
+          de estágio e desenvolvimento profissional.
+        </p>
+
+        <a
+          href="https://carreiras.iel.org.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🔎 Ver oportunidades
+        </a>
+
+      </div>
+
+
+      <!-- SINE -->
+
+      <div class="vaga-card">
+
+        <h3>
+          🇧🇷 SINE / Emprega Brasil
+        </h3>
+
+        <p>
+          Serviço oficial para cadastrar seu perfil
+          e procurar vagas de emprego.
+        </p>
+
+        <a
+          href="https://www.gov.br/pt-br/servicos/buscar-emprego-no-sistema-nacional-de-emprego-sine"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🇧🇷 Buscar vagas
+        </a>
+
+      </div>
+
+
+      <!-- GUPY -->
+
+      <div class="vaga-card">
+
+        <h3>
+          🏢 Gupy
+        </h3>
+
+        <p>
+          Plataforma utilizada por empresas para
+          divulgar vagas e receber candidaturas.
+        </p>
+
+        <a
+          href="https://portal.gupy.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🔎 Procurar oportunidades
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DICA
+  ========================= -->
+
   <div class="dica">
 
-    <h2>💡 Lembre-se</h2>
+    <h2>
+      💡 Lembre-se
+    </h2>
 
     <p>
       Você não precisa ter experiência profissional para
-      começar a se preparar. A escola, os cursos e os
-      projetos também ajudam a desenvolver habilidades.
+      começar a se preparar. A escola, os cursos,
+      projetos e atividades também ajudam a desenvolver
+      habilidades importantes.
+    </p>
+
+    <p>
+      ⚠️ Sempre confira as informações da vaga antes de
+      enviar seus dados. Nunca pague para participar de
+      um processo seletivo e tenha cuidado com pedidos
+      de informações pessoais ou financeiras.
     </p>
 
   </div>
+
 
 </div>
 
 
 <footer>
+
   Cidadão do Futuro | Educação para a Cidadania
+
 </footer>
 
+
 </body>
+
 </html>
